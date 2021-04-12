@@ -13,6 +13,7 @@
 		7076718D26249CDA00D8DEF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7076718B26249CDA00D8DEF1 /* Main.storyboard */; };
 		7076718F26249CDD00D8DEF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7076718E26249CDD00D8DEF1 /* Assets.xcassets */; };
 		7076719226249CDD00D8DEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7076719026249CDD00D8DEF1 /* LaunchScreen.storyboard */; };
+		B024A4BFB623832900A7AFA9 /* Pods_Let_s_Geaux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C80B8C63CBFEC1BDE1039E /* Pods_Let_s_Geaux.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		7076718E26249CDD00D8DEF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7076719126249CDD00D8DEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7076719326249CDD00D8DEF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC3DBBDD48522069659CD78D /* Pods-Let's Geaux.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let's Geaux.release.xcconfig"; path = "Target Support Files/Pods-Let's Geaux/Pods-Let's Geaux.release.xcconfig"; sourceTree = "<group>"; };
+		B1C80B8C63CBFEC1BDE1039E /* Pods_Let_s_Geaux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Let_s_Geaux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79E4D73EF5A37DFFB52689D /* Pods-Let's Geaux.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let's Geaux.debug.xcconfig"; path = "Target Support Files/Pods-Let's Geaux/Pods-Let's Geaux.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B024A4BFB623832900A7AFA9 /* Pods_Let_s_Geaux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				7076718426249CDA00D8DEF1 /* Let's Geaux */,
 				7076718326249CDA00D8DEF1 /* Products */,
+				D02AF539CF0384A940D4F9D9 /* Pods */,
+				E41E1A8A0815E62AD230BDE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "Let's Geaux";
 			sourceTree = "<group>";
 		};
+		D02AF539CF0384A940D4F9D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F79E4D73EF5A37DFFB52689D /* Pods-Let's Geaux.debug.xcconfig */,
+				AC3DBBDD48522069659CD78D /* Pods-Let's Geaux.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E41E1A8A0815E62AD230BDE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1C80B8C63CBFEC1BDE1039E /* Pods_Let_s_Geaux.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7076719626249CDD00D8DEF1 /* Build configuration list for PBXNativeTarget "Let's Geaux" */;
 			buildPhases = (
+				8968F25961B1DBB84C6922A4 /* [CP] Check Pods Manifest.lock */,
 				7076717E26249CDA00D8DEF1 /* Sources */,
 				7076717F26249CDA00D8DEF1 /* Frameworks */,
 				7076718026249CDA00D8DEF1 /* Resources */,
+				6DDFC8E3840DE96F908F128E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DDFC8E3840DE96F908F128E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Let's Geaux/Pods-Let's Geaux-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Let's Geaux/Pods-Let's Geaux-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Let's Geaux/Pods-Let's Geaux-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8968F25961B1DBB84C6922A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Let's Geaux-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7076717E26249CDA00D8DEF1 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		7076719726249CDD00D8DEF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F79E4D73EF5A37DFFB52689D /* Pods-Let's Geaux.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		7076719826249CDD00D8DEF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC3DBBDD48522069659CD78D /* Pods-Let's Geaux.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
