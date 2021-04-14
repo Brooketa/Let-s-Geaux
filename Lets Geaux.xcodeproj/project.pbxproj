@@ -16,6 +16,7 @@
 		707671A22624AE5300D8DEF1 /* LGNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707671A12624AE5300D8DEF1 /* LGNews.swift */; };
 		707671A52624AE7A00D8DEF1 /* LGNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707671A42624AE7A00D8DEF1 /* LGNetwork.swift */; };
 		707671A82624AEA600D8DEF1 /* LGWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707671A72624AEA600D8DEF1 /* LGWebService.swift */; };
+		70772836262729D100D9909A /* LGAppearanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70772835262729D000D9909A /* LGAppearanceUtils.swift */; };
 		70E3FBD02626166600CAE881 /* LGDiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FBCE2626166600CAE881 /* LGDiscoverTableViewCell.swift */; };
 		70E3FBD12626166600CAE881 /* LGDiscoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E3FBCF2626166600CAE881 /* LGDiscoverTableViewCell.xib */; };
 		70E3FBD72626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FBD52626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift */; };
@@ -35,6 +36,7 @@
 		707671A12624AE5300D8DEF1 /* LGNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGNews.swift; sourceTree = "<group>"; };
 		707671A42624AE7A00D8DEF1 /* LGNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGNetwork.swift; sourceTree = "<group>"; };
 		707671A72624AEA600D8DEF1 /* LGWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGWebService.swift; sourceTree = "<group>"; };
+		70772835262729D000D9909A /* LGAppearanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGAppearanceUtils.swift; sourceTree = "<group>"; };
 		70E3FBCE2626166600CAE881 /* LGDiscoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGDiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		70E3FBCF2626166600CAE881 /* LGDiscoverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LGDiscoverTableViewCell.xib; sourceTree = "<group>"; };
 		70E3FBD52626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGWhatsUpCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				70E3FBCC2626161500CAE881 /* Discover */,
 				707671A02624AE2B00D8DEF1 /* Model */,
+				70772834262729B500D9909A /* Utils */,
 				7076718526249CDA00D8DEF1 /* AppDelegate.swift */,
 				7076718726249CDA00D8DEF1 /* SceneDelegate.swift */,
 				7076718B26249CDA00D8DEF1 /* Main.storyboard */,
@@ -107,12 +110,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		70772834262729B500D9909A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				70772835262729D000D9909A /* LGAppearanceUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		70E3FBCC2626161500CAE881 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
 				7076718926249CDA00D8DEF1 /* LGDiscoverViewController.swift */,
-				70E3FBD42626166F00CAE881 /* WhatsUpCollectionViewCell */,
 				70E3FBCD2626162C00CAE881 /* DiscoverTableViewCell */,
+				70E3FBD42626166F00CAE881 /* WhatsUpCollectionViewCell */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -266,6 +277,7 @@
 				707671A82624AEA600D8DEF1 /* LGWebService.swift in Sources */,
 				70E3FBD02626166600CAE881 /* LGDiscoverTableViewCell.swift in Sources */,
 				707671A52624AE7A00D8DEF1 /* LGNetwork.swift in Sources */,
+				70772836262729D100D9909A /* LGAppearanceUtils.swift in Sources */,
 				70E3FBD72626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift in Sources */,
 				7076718826249CDA00D8DEF1 /* SceneDelegate.swift in Sources */,
 			);

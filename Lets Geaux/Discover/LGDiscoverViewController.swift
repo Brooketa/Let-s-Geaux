@@ -22,30 +22,37 @@ class LGDiscoverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        overrideUserInterfaceStyle = .dark
-        navigationController?.overrideUserInterfaceStyle = .dark
-        
         //Table View Configuration
         tableView.register(LGDiscoverTableViewCell.nib(), forCellReuseIdentifier: LGDiscoverTableViewCell.cellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.refreshControl = UIRefreshControl(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        tableView.refreshControl?.tintColor = .white
+        tableView.refreshControl?.addTarget(self, action: #selector(fetch), for: UIControl.Event.valueChanged)
         
-        //tableView.refreshControl = UIRefreshControl(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        
+        //NavigationBar configuration
         navigationItem.largeTitleDisplayMode = .always
         
         let largeTitleAppearance = UINavigationBarAppearance()
 
         largeTitleAppearance.configureWithOpaqueBackground()
         largeTitleAppearance.backgroundImage = UIImage(named: "background_gradient_image.png")
+        largeTitleAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         
         navigationController?.navigationBar.standardAppearance = largeTitleAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = largeTitleAppearance
         
-        LGWebService.fetchNews(completion: { news, error in
+        fetch()
+    }
+    
+    @objc func fetch() {
+        LGWebService.fetchNews(completion: { [weak self] news, error in
             if error == nil {
                 guard let news = news else { return }
-                self.news = news
+                self?.news = news
+                if self?.tableView.refreshControl?.isRefreshing != nil {
+                    self?.tableView.refreshControl?.endRefreshing()
+                }
             }
         })
     }

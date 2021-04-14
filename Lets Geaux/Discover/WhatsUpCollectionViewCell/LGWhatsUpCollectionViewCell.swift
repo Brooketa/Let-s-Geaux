@@ -16,6 +16,8 @@ class LGWhatsUpCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var publishedLabel: UILabel!
     
     static let cellIdentifier = "LGWhatsUpCollectionViewCell"
+    
+    let eventAttributes = [NSAttributedString.Key.foregroundColor : LGAppearanceUtils.turquoise, NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 13)]
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +32,15 @@ class LGWhatsUpCollectionViewCell: UICollectionViewCell {
         newsImageView.sd_setImage(with: URL(string: news.imageURL), placeholderImage: nil, options: SDWebImageOptions.highPriority, completed: nil)
         titleLabel.text = news.title
         captionLabel.text = news.caption
-        publishedLabel.text = news.createdAt
+        publishedLabel.attributedText = publishedLabelAttributedText(date: "published: \(news.createdAt)")
+    }
+    
+    private func publishedLabelAttributedText(date:String) -> NSAttributedString {
+        let attributedEventText = NSMutableAttributedString(string: "Event", attributes: eventAttributes)
+        let attributedDate = NSMutableAttributedString(string: "  •  \(date)")
+        attributedEventText.append(attributedDate)
+        
+        return attributedEventText
     }
     
     private func configureAppearance() {

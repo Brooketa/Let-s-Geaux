@@ -86,10 +86,7 @@ extension LGDiscoverTableViewCell: UICollectionViewDataSource {
 extension LGDiscoverTableViewCell: UIScrollViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let layout = self.collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
-
-//        print("Line space \(layout.minimumLineSpacing)")
-//        print("Width \(layout.itemSize.width)")
-
+        
         let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
 
         var offset = targetContentOffset.pointee
