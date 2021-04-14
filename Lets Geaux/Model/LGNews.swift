@@ -9,7 +9,7 @@ import Foundation
 
 struct LGNews {
     var imageURL:String
-    var createdAt: Date
+    var createdAt: String
     var caption: String
     var title: String
     var description: String
@@ -19,7 +19,12 @@ struct LGNews {
         
         let dateInt = data["created_at"] as? Int ?? 0
         
-        self.createdAt = Date(timeIntervalSince1970: TimeInterval(dateInt))
+        let date = Date(timeIntervalSince1970: TimeInterval(dateInt))
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        
+        self.createdAt = dateFormatter.string(from: date)
         
         self.caption = data["caption"] as? String ?? ""
         

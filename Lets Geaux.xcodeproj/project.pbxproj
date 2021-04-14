@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		7076718626249CDA00D8DEF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7076718526249CDA00D8DEF1 /* AppDelegate.swift */; };
 		7076718826249CDA00D8DEF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7076718726249CDA00D8DEF1 /* SceneDelegate.swift */; };
-		7076718A26249CDA00D8DEF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7076718926249CDA00D8DEF1 /* ViewController.swift */; };
+		7076718A26249CDA00D8DEF1 /* LGDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7076718926249CDA00D8DEF1 /* LGDiscoverViewController.swift */; };
 		7076718D26249CDA00D8DEF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7076718B26249CDA00D8DEF1 /* Main.storyboard */; };
 		7076718F26249CDD00D8DEF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7076718E26249CDD00D8DEF1 /* Assets.xcassets */; };
 		7076719226249CDD00D8DEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7076719026249CDD00D8DEF1 /* LaunchScreen.storyboard */; };
 		707671A22624AE5300D8DEF1 /* LGNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707671A12624AE5300D8DEF1 /* LGNews.swift */; };
 		707671A52624AE7A00D8DEF1 /* LGNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707671A42624AE7A00D8DEF1 /* LGNetwork.swift */; };
 		707671A82624AEA600D8DEF1 /* LGWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707671A72624AEA600D8DEF1 /* LGWebService.swift */; };
+		70E3FBD02626166600CAE881 /* LGDiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FBCE2626166600CAE881 /* LGDiscoverTableViewCell.swift */; };
+		70E3FBD12626166600CAE881 /* LGDiscoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E3FBCF2626166600CAE881 /* LGDiscoverTableViewCell.xib */; };
+		70E3FBD72626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FBD52626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift */; };
+		70E3FBD82626169D00CAE881 /* LGWhatsUpCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E3FBD62626169D00CAE881 /* LGWhatsUpCollectionViewCell.xib */; };
 		7F1283D65C70C090E72FE652 /* Pods_Lets_Geaux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B21ED266A25F8FA1E69B1E /* Pods_Lets_Geaux.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +27,7 @@
 		7076718226249CDA00D8DEF1 /* Lets Geaux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lets Geaux.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7076718526249CDA00D8DEF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7076718726249CDA00D8DEF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7076718926249CDA00D8DEF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7076718926249CDA00D8DEF1 /* LGDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGDiscoverViewController.swift; sourceTree = "<group>"; };
 		7076718C26249CDA00D8DEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7076718E26249CDD00D8DEF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7076719126249CDD00D8DEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +35,10 @@
 		707671A12624AE5300D8DEF1 /* LGNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGNews.swift; sourceTree = "<group>"; };
 		707671A42624AE7A00D8DEF1 /* LGNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGNetwork.swift; sourceTree = "<group>"; };
 		707671A72624AEA600D8DEF1 /* LGWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGWebService.swift; sourceTree = "<group>"; };
+		70E3FBCE2626166600CAE881 /* LGDiscoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGDiscoverTableViewCell.swift; sourceTree = "<group>"; };
+		70E3FBCF2626166600CAE881 /* LGDiscoverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LGDiscoverTableViewCell.xib; sourceTree = "<group>"; };
+		70E3FBD52626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGWhatsUpCollectionViewCell.swift; sourceTree = "<group>"; };
+		70E3FBD62626169D00CAE881 /* LGWhatsUpCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LGWhatsUpCollectionViewCell.xib; sourceTree = "<group>"; };
 		73B21ED266A25F8FA1E69B1E /* Pods_Lets_Geaux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lets_Geaux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34712C76B18DE55BEEAE0BA /* Pods-Lets Geaux.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lets Geaux.release.xcconfig"; path = "Target Support Files/Pods-Lets Geaux/Pods-Lets Geaux.release.xcconfig"; sourceTree = "<group>"; };
 		C60043EDD80B87028C9A28E2 /* Pods-Lets Geaux.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lets Geaux.debug.xcconfig"; path = "Target Support Files/Pods-Lets Geaux/Pods-Lets Geaux.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,10 +85,10 @@
 		7076718426249CDA00D8DEF1 /* Lets Geaux */ = {
 			isa = PBXGroup;
 			children = (
+				70E3FBCC2626161500CAE881 /* Discover */,
 				707671A02624AE2B00D8DEF1 /* Model */,
 				7076718526249CDA00D8DEF1 /* AppDelegate.swift */,
 				7076718726249CDA00D8DEF1 /* SceneDelegate.swift */,
-				7076718926249CDA00D8DEF1 /* ViewController.swift */,
 				7076718B26249CDA00D8DEF1 /* Main.storyboard */,
 				7076718E26249CDD00D8DEF1 /* Assets.xcassets */,
 				7076719026249CDD00D8DEF1 /* LaunchScreen.storyboard */,
@@ -97,6 +105,34 @@
 				707671A72624AEA600D8DEF1 /* LGWebService.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		70E3FBCC2626161500CAE881 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				7076718926249CDA00D8DEF1 /* LGDiscoverViewController.swift */,
+				70E3FBD42626166F00CAE881 /* WhatsUpCollectionViewCell */,
+				70E3FBCD2626162C00CAE881 /* DiscoverTableViewCell */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		70E3FBCD2626162C00CAE881 /* DiscoverTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				70E3FBCE2626166600CAE881 /* LGDiscoverTableViewCell.swift */,
+				70E3FBCF2626166600CAE881 /* LGDiscoverTableViewCell.xib */,
+			);
+			path = DiscoverTableViewCell;
+			sourceTree = "<group>";
+		};
+		70E3FBD42626166F00CAE881 /* WhatsUpCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				70E3FBD52626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift */,
+				70E3FBD62626169D00CAE881 /* LGWhatsUpCollectionViewCell.xib */,
+			);
+			path = WhatsUpCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		D02AF539CF0384A940D4F9D9 /* Pods */ = {
@@ -168,8 +204,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7076719226249CDD00D8DEF1 /* LaunchScreen.storyboard in Resources */,
+				70E3FBD12626166600CAE881 /* LGDiscoverTableViewCell.xib in Resources */,
 				7076718F26249CDD00D8DEF1 /* Assets.xcassets in Resources */,
 				7076718D26249CDA00D8DEF1 /* Main.storyboard in Resources */,
+				70E3FBD82626169D00CAE881 /* LGWhatsUpCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,11 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7076718A26249CDA00D8DEF1 /* ViewController.swift in Sources */,
+				7076718A26249CDA00D8DEF1 /* LGDiscoverViewController.swift in Sources */,
 				707671A22624AE5300D8DEF1 /* LGNews.swift in Sources */,
 				7076718626249CDA00D8DEF1 /* AppDelegate.swift in Sources */,
 				707671A82624AEA600D8DEF1 /* LGWebService.swift in Sources */,
+				70E3FBD02626166600CAE881 /* LGDiscoverTableViewCell.swift in Sources */,
 				707671A52624AE7A00D8DEF1 /* LGNetwork.swift in Sources */,
+				70E3FBD72626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift in Sources */,
 				7076718826249CDA00D8DEF1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
