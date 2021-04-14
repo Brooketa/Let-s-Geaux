@@ -11,13 +11,7 @@ class LGDiscoverViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
         
-    var news:[LGNews]? {
-        didSet {
-            if isViewLoaded {
-                tableView.reloadData()
-            }
-        }
-    }
+    var news:[LGNews]? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,10 +43,13 @@ class LGDiscoverViewController: UIViewController {
         LGWebService.fetchNews(completion: { [weak self] news, error in
             if error == nil {
                 guard let news = news else { return }
-                self?.news = news
                 if self?.tableView.refreshControl?.isRefreshing != nil {
-                    self?.tableView.refreshControl?.endRefreshing()
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self?.tableView.refreshControl?.endRefreshing()
+                        self?.tableView.reloadData()
+                    })
                 }
+                self?.news = news
             }
         })
     }
@@ -72,16 +69,40 @@ extension LGDiscoverViewController: UITableViewDataSource {
         return 1
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
+        header.backgroundColor = LGAppearanceUtils.lightGrey
+        
+        let label = UILabel(frame: CGRect(x: 25, y: 0, width: view.frame.size.width - 40, height: 50))
+        label.textColor = .black
+        label.text = "What's up?"
+        label.font = UIFont.boldSystemFont(ofSize: 25)
+        
+        let button = UIButton(frame: CGRect(x: view.frame.size.width - 90, y: 17.5, width: 80, height: 15))
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.setTitle("All news", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        
+        header.addSubview(label)
+        header.addSubview(button)
+        
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LGDiscoverTableViewCell.cellIdentifier) as! LGDiscoverTableViewCell
         if news?.count ?? 0 > 0 {
-            cell.configure(news: news!, frameWidth: view.frame.width)
+            cell.configure(news: news!, frameWidth: view.frame.size.width)
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(self.view.bounds.width * 0.8 * 1.4)
+        return CGFloat(view.frame.size.width * 0.8 * 1.4)
     }
 }
 

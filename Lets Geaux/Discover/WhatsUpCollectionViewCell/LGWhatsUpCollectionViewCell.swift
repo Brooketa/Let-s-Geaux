@@ -21,7 +21,6 @@ class LGWhatsUpCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureAppearance()
     }
     
     static func nib() -> UINib {
@@ -33,6 +32,7 @@ class LGWhatsUpCollectionViewCell: UICollectionViewCell {
         titleLabel.text = news.title
         captionLabel.text = news.caption
         publishedLabel.attributedText = publishedLabelAttributedText(date: "published: \(news.createdAt)")
+        configureAppearance()
     }
     
     private func publishedLabelAttributedText(date:String) -> NSAttributedString {
@@ -50,9 +50,9 @@ class LGWhatsUpCollectionViewCell: UICollectionViewCell {
         self.contentView.layer.masksToBounds = true
         
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: -10, height: -20.0)
+        self.layer.shadowOffset = CGSize(width: 0, height: 5.0)
         self.layer.shadowRadius = 10.0
-        self.layer.shadowOpacity = 0.05
+        self.layer.shadowOpacity = 0.1
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius - 5).cgPath
     }
