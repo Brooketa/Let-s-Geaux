@@ -30,6 +30,8 @@ struct LGNews {
         
         self.title = data["title"] as? String ?? ""
         
-        self.description = data["description"] as? String ?? ""
+        let desc = data["description"] as? String ?? ""
+        
+        self.description = String(htmlEncodedString: desc)!
     }
 }

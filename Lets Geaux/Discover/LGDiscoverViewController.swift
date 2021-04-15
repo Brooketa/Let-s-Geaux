@@ -29,15 +29,20 @@ class LGDiscoverViewController: LGViewController, UITableViewDelegate {
     
     @objc func fetch() {
         LGWebService.fetchNews(completion: { [weak self] news, error in
+            let isRefreshing = self?.tableView.refreshControl?.isRefreshing
             if error == nil {
                 guard let news = news else { return }
-                if self?.tableView.refreshControl?.isRefreshing != nil {
+                if isRefreshing != nil {
                     UIView.animate(withDuration: 0.3, animations: {
                         self?.tableView.refreshControl?.endRefreshing()
                         self?.tableView.reloadData()
                     })
                 }
                 self?.news = news
+            } else {
+                if isRefreshing != nil {
+                    self?.tableView.refreshControl?.endRefreshing()
+                }
             }
         })
     }

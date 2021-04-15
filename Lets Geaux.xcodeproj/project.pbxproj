@@ -25,6 +25,7 @@
 		70E3FBD12626166600CAE881 /* LGDiscoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E3FBCF2626166600CAE881 /* LGDiscoverTableViewCell.xib */; };
 		70E3FBD72626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FBD52626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift */; };
 		70E3FBD82626169D00CAE881 /* LGWhatsUpCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E3FBD62626169D00CAE881 /* LGWhatsUpCollectionViewCell.xib */; };
+		70F616232628D2BA0072F8BC /* LGStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F616222628D2BA0072F8BC /* LGStringExtensions.swift */; };
 		70FD4B0126289A6D0049EA5B /* LGNearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD4B0026289A6D0049EA5B /* LGNearMeViewController.swift */; };
 		70FD4B0426289A830049EA5B /* LGPrizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD4B0326289A830049EA5B /* LGPrizesViewController.swift */; };
 		7F1283D65C70C090E72FE652 /* Pods_Lets_Geaux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B21ED266A25F8FA1E69B1E /* Pods_Lets_Geaux.framework */; };
@@ -51,6 +52,7 @@
 		70E3FBCF2626166600CAE881 /* LGDiscoverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LGDiscoverTableViewCell.xib; sourceTree = "<group>"; };
 		70E3FBD52626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGWhatsUpCollectionViewCell.swift; sourceTree = "<group>"; };
 		70E3FBD62626169D00CAE881 /* LGWhatsUpCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LGWhatsUpCollectionViewCell.xib; sourceTree = "<group>"; };
+		70F616222628D2BA0072F8BC /* LGStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGStringExtensions.swift; sourceTree = "<group>"; };
 		70FD4B0026289A6D0049EA5B /* LGNearMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGNearMeViewController.swift; sourceTree = "<group>"; };
 		70FD4B0326289A830049EA5B /* LGPrizesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGPrizesViewController.swift; sourceTree = "<group>"; };
 		73B21ED266A25F8FA1E69B1E /* Pods_Lets_Geaux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lets_Geaux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,12 +101,13 @@
 		7076718426249CDA00D8DEF1 /* Lets Geaux */ = {
 			isa = PBXGroup;
 			children = (
+				707671A02624AE2B00D8DEF1 /* Model */,
 				7083A9602628962100B30947 /* LGViewController.swift */,
 				70E3FBCC2626161500CAE881 /* Discover */,
 				70FD4B0626289A870049EA5B /* Near me */,
 				70FD4B0726289AA00049EA5B /* Prizes */,
 				70D650AF2628590400777ECD /* News */,
-				707671A02624AE2B00D8DEF1 /* Model */,
+				70F616212628D2880072F8BC /* Extensions */,
 				70772834262729B500D9909A /* Utils */,
 				7076718526249CDA00D8DEF1 /* AppDelegate.swift */,
 				7076718726249CDA00D8DEF1 /* SceneDelegate.swift */,
@@ -178,6 +181,14 @@
 				70E3FBD62626169D00CAE881 /* LGWhatsUpCollectionViewCell.xib */,
 			);
 			path = WhatsUpCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		70F616212628D2880072F8BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				70F616222628D2BA0072F8BC /* LGStringExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		70FD4B0626289A870049EA5B /* Near me */ = {
@@ -327,6 +338,7 @@
 				707671A22624AE5300D8DEF1 /* LGNews.swift in Sources */,
 				7076718626249CDA00D8DEF1 /* AppDelegate.swift in Sources */,
 				7083A95626287E5D00B30947 /* LGDiscoverTableViewSectionHeader.swift in Sources */,
+				70F616232628D2BA0072F8BC /* LGStringExtensions.swift in Sources */,
 				707671A82624AEA600D8DEF1 /* LGWebService.swift in Sources */,
 				70FD4B0426289A830049EA5B /* LGPrizesViewController.swift in Sources */,
 				70E3FBD02626166600CAE881 /* LGDiscoverTableViewCell.swift in Sources */,
@@ -494,7 +506,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.thr.letsgeaux.Let-s-Geaux";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -515,7 +527,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.thr.letsgeaux.Let-s-Geaux";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
