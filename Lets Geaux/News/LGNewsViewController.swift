@@ -17,12 +17,12 @@ class LGNewsViewController: LGViewController {
     @IBOutlet weak var publishedLabel: UILabel!
     
     var news:LGNews?
-    var newsImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.rightBarButtonItems = nil
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
         scrollView.alwaysBounceVertical = true
