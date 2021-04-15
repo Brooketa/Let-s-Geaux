@@ -70,21 +70,9 @@ extension LGDiscoverViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
-        header.backgroundColor = LGAppearanceUtils.lightGrey
+        guard let header = Bundle.main.loadNibNamed("LGDiscoverTableViewSectionHeader", owner: self, options: nil)?.first as? LGDiscoverTableViewSectionHeader else { return nil }
         
-        let label = UILabel(frame: CGRect(x: 25, y: 0, width: view.frame.size.width - 40, height: 50))
-        label.textColor = .black
-        label.text = "What's up?"
-        label.font = UIFont.boldSystemFont(ofSize: 25)
-        
-        let button = UIButton(frame: CGRect(x: view.frame.size.width - 90, y: 17.5, width: 80, height: 15))
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        button.setTitle("All news", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        
-        header.addSubview(label)
-        header.addSubview(button)
+        header.configure(sectionTitleName: "What's Up?", buttonTitleName: "All news")
         
         return header
     }
@@ -95,10 +83,12 @@ extension LGDiscoverViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LGDiscoverTableViewCell.cellIdentifier) as! LGDiscoverTableViewCell
+        
         if news?.count ?? 0 > 0 {
             cell.configure(news: news!, frameWidth: view.frame.size.width)
             cell.delegate = self
         }
+        
         return cell
     }
     

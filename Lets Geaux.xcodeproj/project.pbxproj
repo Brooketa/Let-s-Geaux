@@ -17,6 +17,8 @@
 		707671A52624AE7A00D8DEF1 /* LGNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707671A42624AE7A00D8DEF1 /* LGNetwork.swift */; };
 		707671A82624AEA600D8DEF1 /* LGWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707671A72624AEA600D8DEF1 /* LGWebService.swift */; };
 		70772836262729D100D9909A /* LGAppearanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70772835262729D000D9909A /* LGAppearanceUtils.swift */; };
+		7083A95626287E5D00B30947 /* LGDiscoverTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083A95526287E5D00B30947 /* LGDiscoverTableViewSectionHeader.swift */; };
+		7083A95A26287F2600B30947 /* LGDiscoverTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7083A95926287F2600B30947 /* LGDiscoverTableViewSectionHeader.xib */; };
 		70D650B12628591800777ECD /* LGNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D650B02628591800777ECD /* LGNewsViewController.swift */; };
 		70E3FBD02626166600CAE881 /* LGDiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FBCE2626166600CAE881 /* LGDiscoverTableViewCell.swift */; };
 		70E3FBD12626166600CAE881 /* LGDiscoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E3FBCF2626166600CAE881 /* LGDiscoverTableViewCell.xib */; };
@@ -38,6 +40,8 @@
 		707671A42624AE7A00D8DEF1 /* LGNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGNetwork.swift; sourceTree = "<group>"; };
 		707671A72624AEA600D8DEF1 /* LGWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGWebService.swift; sourceTree = "<group>"; };
 		70772835262729D000D9909A /* LGAppearanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGAppearanceUtils.swift; sourceTree = "<group>"; };
+		7083A95526287E5D00B30947 /* LGDiscoverTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGDiscoverTableViewSectionHeader.swift; sourceTree = "<group>"; };
+		7083A95926287F2600B30947 /* LGDiscoverTableViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LGDiscoverTableViewSectionHeader.xib; sourceTree = "<group>"; };
 		70D650B02628591800777ECD /* LGNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGNewsViewController.swift; sourceTree = "<group>"; };
 		70E3FBCE2626166600CAE881 /* LGDiscoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGDiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		70E3FBCF2626166600CAE881 /* LGDiscoverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LGDiscoverTableViewCell.xib; sourceTree = "<group>"; };
@@ -121,6 +125,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		7083A95426287E4100B30947 /* DiscoverTableViewSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				7083A95526287E5D00B30947 /* LGDiscoverTableViewSectionHeader.swift */,
+				7083A95926287F2600B30947 /* LGDiscoverTableViewSectionHeader.xib */,
+			);
+			path = DiscoverTableViewSectionHeader;
+			sourceTree = "<group>";
+		};
 		70D650AF2628590400777ECD /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				7076718926249CDA00D8DEF1 /* LGDiscoverViewController.swift */,
+				7083A95426287E4100B30947 /* DiscoverTableViewSectionHeader */,
 				70E3FBCD2626162C00CAE881 /* DiscoverTableViewCell */,
 				70E3FBD42626166F00CAE881 /* WhatsUpCollectionViewCell */,
 			);
@@ -225,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7083A95A26287F2600B30947 /* LGDiscoverTableViewSectionHeader.xib in Resources */,
 				7076719226249CDD00D8DEF1 /* LaunchScreen.storyboard in Resources */,
 				70E3FBD12626166600CAE881 /* LGDiscoverTableViewCell.xib in Resources */,
 				7076718F26249CDD00D8DEF1 /* Assets.xcassets in Resources */,
@@ -286,6 +301,7 @@
 				7076718A26249CDA00D8DEF1 /* LGDiscoverViewController.swift in Sources */,
 				707671A22624AE5300D8DEF1 /* LGNews.swift in Sources */,
 				7076718626249CDA00D8DEF1 /* AppDelegate.swift in Sources */,
+				7083A95626287E5D00B30947 /* LGDiscoverTableViewSectionHeader.swift in Sources */,
 				707671A82624AEA600D8DEF1 /* LGWebService.swift in Sources */,
 				70E3FBD02626166600CAE881 /* LGDiscoverTableViewCell.swift in Sources */,
 				707671A52624AE7A00D8DEF1 /* LGNetwork.swift in Sources */,
