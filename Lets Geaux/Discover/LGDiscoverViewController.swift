@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LGDiscoverViewController: UIViewController, UITableViewDelegate {
+class LGDiscoverViewController: LGViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
         
@@ -23,22 +23,6 @@ class LGDiscoverViewController: UIViewController, UITableViewDelegate {
         tableView.refreshControl = UIRefreshControl(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         tableView.refreshControl?.tintColor = .white
         tableView.refreshControl?.addTarget(self, action: #selector(fetch), for: UIControl.Event.valueChanged)
-        
-        //NavigationBar configuration
-        navigationItem.largeTitleDisplayMode = .always
-        let favouritesButton = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), style: UIBarButtonItem.Style.plain, target: nil, action: nil)
-        let profileButton = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: UIBarButtonItem.Style.plain, target: nil, action: nil)
-        navigationItem.rightBarButtonItems = [ profileButton, favouritesButton]
-        
-        let largeTitleAppearance = UINavigationBarAppearance()
-        
-        largeTitleAppearance.configureWithOpaqueBackground()
-        largeTitleAppearance.backgroundImage = UIImage(named: "background_gradient_image.png")
-        largeTitleAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        
-        navigationController?.navigationBar.standardAppearance = largeTitleAppearance
-        navigationController?.navigationBar.scrollEdgeAppearance = largeTitleAppearance
-        navigationController?.navigationBar.tintColor = .white
         
         fetch()
     }

@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class LGNewsViewController: UIViewController {
+class LGNewsViewController: LGViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var newsImageView: UIImageView!
