@@ -90,7 +90,7 @@
         <!--Near me-->
         <scene sceneID="ARJ-Uk-0pp">
             <objects>
-                <viewController id="ggg-Lg-tv5" customClass="LGViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ggg-Lg-tv5" customClass="LGNearMeViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vgT-Gi-VQS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,7 +106,7 @@
         <!--Prizes-->
         <scene sceneID="J4d-uf-dHx">
             <objects>
-                <viewController id="tjQ-4Q-VLy" customClass="LGViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tjQ-4Q-VLy" customClass="LGPrizesViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GTb-h5-Ucg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
