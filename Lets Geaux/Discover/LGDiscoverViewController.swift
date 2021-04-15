@@ -7,11 +7,11 @@
 
 import UIKit
 
-class LGDiscoverViewController: UIViewController {
+class LGDiscoverViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
         
-    var news:[LGNews]? 
+    var news:[LGNews]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class LGDiscoverViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .always
         
         let largeTitleAppearance = UINavigationBarAppearance()
-
+        
         largeTitleAppearance.configureWithOpaqueBackground()
         largeTitleAppearance.backgroundImage = UIImage(named: "background_gradient_image.png")
         largeTitleAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
@@ -53,10 +53,6 @@ class LGDiscoverViewController: UIViewController {
             }
         })
     }
-}
-
-extension LGDiscoverViewController: UITableViewDelegate {
-    
 }
 
 extension LGDiscoverViewController: UITableViewDataSource {
@@ -97,12 +93,30 @@ extension LGDiscoverViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: LGDiscoverTableViewCell.cellIdentifier) as! LGDiscoverTableViewCell
         if news?.count ?? 0 > 0 {
             cell.configure(news: news!, frameWidth: view.frame.size.width)
+            cell.delegate = self
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(view.frame.size.width * 0.8 * 1.4)
+    }
+}
+
+extension LGDiscoverViewController: LGDiscoverTableViewCellDelegate {
+    func didSelectCell(indexPath: IndexPath) {
+        if let newsItem = news?[indexPath.row] {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            guard let newsViewController = storyboard.instantiateViewController(identifier: "LGNewsViewController") as? LGNewsViewController else { return }
+            newsViewController.navigationItem.title = "News"
+            newsViewController.hidesBottomBarWhenPushed = true
+            
+            newsViewController.news = newsItem
+            self.navigationController?.pushViewController(newsViewController, animated: true)
+            
+        }
     }
 }
 

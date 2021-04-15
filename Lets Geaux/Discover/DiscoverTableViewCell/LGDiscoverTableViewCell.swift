@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol LGDiscoverTableViewCellDelegate: AnyObject {
+    func didSelectCell(indexPath:IndexPath)
+}
+
 class LGDiscoverTableViewCell: UITableViewCell {
     
 
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    weak var delegate:LGDiscoverTableViewCellDelegate? = nil
     
     let layout = UICollectionViewFlowLayout()
     
@@ -65,7 +71,11 @@ class LGDiscoverTableViewCell: UITableViewCell {
 
 extension LGDiscoverTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? LGWhatsUpCollectionViewCell else { return }
         
+        guard let image = cell.newsImageView.image else { return }
+        
+        delegate?.didSelectCell(indexPath: indexPath)
     }
 }
 
