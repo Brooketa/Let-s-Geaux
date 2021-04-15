@@ -23,9 +23,7 @@ class LGNewsViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
-        navigationController?.navigationBar.tintColor = .white
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
         scrollView.alwaysBounceVertical = true
         scrollView.alwaysBounceHorizontal = false

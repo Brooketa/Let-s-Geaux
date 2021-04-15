@@ -26,6 +26,9 @@ class LGDiscoverViewController: UIViewController, UITableViewDelegate {
         
         //NavigationBar configuration
         navigationItem.largeTitleDisplayMode = .always
+        let favouritesButton = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+        let profileButton = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItems = [ profileButton, favouritesButton]
         
         let largeTitleAppearance = UINavigationBarAppearance()
         
@@ -35,6 +38,7 @@ class LGDiscoverViewController: UIViewController, UITableViewDelegate {
         
         navigationController?.navigationBar.standardAppearance = largeTitleAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = largeTitleAppearance
+        navigationController?.navigationBar.tintColor = .white
         
         fetch()
     }
