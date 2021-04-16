@@ -24,8 +24,8 @@ class LGDiscoverTableViewSectionHeader: UIView {
         }
     }
     
-    static func nib() -> UINib {
-        return UINib(nibName: "LGDiscoverTableViewSectionHeader", bundle: nil)
+    static func nibName() -> String {
+        return "LGDiscoverTableViewSectionHeader"
     }
     
 }

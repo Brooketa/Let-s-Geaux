@@ -104,9 +104,9 @@
 				707671A02624AE2B00D8DEF1 /* Model */,
 				7083A9602628962100B30947 /* LGViewController.swift */,
 				70E3FBCC2626161500CAE881 /* Discover */,
-				70FD4B0626289A870049EA5B /* Near me */,
-				70FD4B0726289AA00049EA5B /* Prizes */,
 				70D650AF2628590400777ECD /* News */,
+				70F6162626290FE70072F8BC /* Near me */,
+				70F6162726290FF60072F8BC /* Prizes */,
 				70F616212628D2880072F8BC /* Extensions */,
 				70772834262729B500D9909A /* Utils */,
 				7076718526249CDA00D8DEF1 /* AppDelegate.swift */,
@@ -191,7 +191,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		70FD4B0626289A870049EA5B /* Near me */ = {
+		70F6162626290FE70072F8BC /* Near me */ = {
 			isa = PBXGroup;
 			children = (
 				70FD4B0026289A6D0049EA5B /* LGNearMeViewController.swift */,
@@ -199,7 +199,7 @@
 			path = "Near me";
 			sourceTree = "<group>";
 		};
-		70FD4B0726289AA00049EA5B /* Prizes */ = {
+		70F6162726290FF60072F8BC /* Prizes */ = {
 			isa = PBXGroup;
 			children = (
 				70FD4B0326289A830049EA5B /* LGPrizesViewController.swift */,

@@ -48,6 +48,8 @@ class LGDiscoverViewController: LGViewController, UITableViewDelegate {
     }
 }
 
+//MARK: UITableViewDataSource
+
 extension LGDiscoverViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,7 +61,7 @@ extension LGDiscoverViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = Bundle.main.loadNibNamed("LGDiscoverTableViewSectionHeader", owner: self, options: nil)?.first as? LGDiscoverTableViewSectionHeader else { return nil }
+        guard let header = Bundle.main.loadNibNamed(LGDiscoverTableViewSectionHeader.nibName(), owner: self, options: nil)?.first as? LGDiscoverTableViewSectionHeader else { return nil }
         
         header.configure(sectionTitleName: "What's Up?", buttonTitleName: "All news")
         
@@ -86,13 +88,15 @@ extension LGDiscoverViewController: UITableViewDataSource {
     }
 }
 
+//MARK: LGDiscoverTableViewCellDelegate
+
 extension LGDiscoverViewController: LGDiscoverTableViewCellDelegate {
     func didSelectCell(indexPath: IndexPath) {
         if let newsItem = news?[indexPath.row] {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            guard let newsViewController = storyboard.instantiateViewController(identifier: "LGNewsViewController") as? LGNewsViewController else { return }
+            guard let newsViewController = storyboard.instantiateViewController(identifier: LGNewsViewController.identifier) as? LGNewsViewController else { return }
             newsViewController.navigationItem.title = "News"
             newsViewController.hidesBottomBarWhenPushed = true
             

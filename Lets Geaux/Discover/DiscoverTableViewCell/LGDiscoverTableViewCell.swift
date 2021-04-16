@@ -11,18 +11,23 @@ protocol LGDiscoverTableViewCellDelegate: AnyObject {
     func didSelectCell(indexPath:IndexPath)
 }
 
+struct LGDiscoverTableViewConstants {
+    static let widthScaleFactor:CGFloat = 0.8
+    static let cellAspectRatio:CGFloat = 1.2
+}
+
 class LGDiscoverTableViewCell: UITableViewCell {
     
 
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    static let cellIdentifier = "LGDiscoverTableViewCell"
+
     weak var delegate:LGDiscoverTableViewCellDelegate? = nil
     
     let layout = UICollectionViewFlowLayout()
-    
-    static let cellIdentifier = "LGDiscoverTableViewCell"
-    
+        
     var news:[LGNews] = [] {
         didSet {
             collectionView.reloadData()
@@ -35,7 +40,6 @@ class LGDiscoverTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
     }
     
     static func nib() -> UINib {
@@ -54,8 +58,10 @@ class LGDiscoverTableViewCell: UITableViewCell {
         collectionView.dataSource = self
         
         //Collection View appearance configuration
-        let itemSize = CGSize(width: frameWidth * 0.8, height: frameWidth * 0.8 * 1.2)
-        let insetSize = (frameWidth - frameWidth * 0.8) / 2
+        let itemSize = CGSize(width: frameWidth * LGDiscoverTableViewConstants.widthScaleFactor,
+                              height: frameWidth * LGDiscoverTableViewConstants.widthScaleFactor * LGDiscoverTableViewConstants.cellAspectRatio)
+        
+        let insetSize = (frameWidth - frameWidth * LGDiscoverTableViewConstants.widthScaleFactor) / 2
 
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 25
@@ -69,11 +75,15 @@ class LGDiscoverTableViewCell: UITableViewCell {
     }
 }
 
+//MARK: UICollectionViewDelegate
+
 extension LGDiscoverTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didSelectCell(indexPath: indexPath)
     }
 }
+
+//MARK: UICollectionViewDataSource
 
 extension LGDiscoverTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -88,6 +98,8 @@ extension LGDiscoverTableViewCell: UICollectionViewDataSource {
         return cell
     }
 }
+
+//MARK: UIScrollViewDelegate
 
 extension LGDiscoverTableViewCell: UIScrollViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {

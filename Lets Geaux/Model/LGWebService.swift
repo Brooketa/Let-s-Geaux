@@ -27,6 +27,7 @@ class LGWebService {
             if let error = error {
                 print("Finished with error: \(error.localizedDescription)")
                 completion(nil, error)
+                return
             }
             
             guard let data = data else { return }

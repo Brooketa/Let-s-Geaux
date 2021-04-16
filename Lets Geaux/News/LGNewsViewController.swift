@@ -16,6 +16,8 @@ class LGNewsViewController: LGViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var publishedLabel: UILabel!
     
+    static let identifier = "LGNewsViewController"
+    
     var news:LGNews?
     
     override func viewDidLoad() {
@@ -31,11 +33,11 @@ class LGNewsViewController: LGViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        displayNewsData()
+        loadNewsData()
         scrollView.contentSize = CGSize(width: 0, height: scrollView.contentSize.height)
     }
     
-    func displayNewsData() {
+    func loadNewsData() {
         guard let news = self.news else { return }
 
         newsImageView.sd_setImage(with: URL(string: news.imageURL), placeholderImage: nil, options: SDWebImageOptions.highPriority, completed: nil)
