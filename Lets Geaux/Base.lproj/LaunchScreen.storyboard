@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-screen-background" translatesAutoresizingMaskIntoConstraints="NO" id="7xV-P1-bhw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-screen-background" translatesAutoresizingMaskIntoConstraints="NO" id="7xV-P1-bhw">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="long-shadow-logo" translatesAutoresizingMaskIntoConstraints="NO" id="aVr-WA-5Mh">
@@ -34,8 +34,6 @@
                             <constraint firstItem="7xV-P1-bhw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3qI-tR-MbG"/>
                             <constraint firstItem="aVr-WA-5Mh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4bN-G4-S55"/>
                             <constraint firstItem="aVr-WA-5Mh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MZu-yF-Wa1"/>
-                            <constraint firstItem="aVr-WA-5Mh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Rxj-ps-DRj"/>
-                            <constraint firstItem="aVr-WA-5Mh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ydp-nW-2Yi"/>
                             <constraint firstItem="7xV-P1-bhw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fbd-bA-WND"/>
                             <constraint firstItem="7xV-P1-bhw" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="oRG-la-5oP"/>
                         </constraints>
