@@ -30,9 +30,15 @@ class LGWebService {
                 return
             }
             
-            guard let data = data else { return }
+            guard let data = data else {
+                completion(nil, nil)
+                return
+            }
             
-            guard let newsData = data["data"] as? [[String:Any]] else { return }
+            guard let newsData = data["data"] as? [[String:Any]] else {
+                completion(nil, nil)
+                return
+            }
             
             var newsArray:[LGNews] = [LGNews]()
             

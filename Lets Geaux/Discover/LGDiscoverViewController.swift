@@ -42,6 +42,7 @@ class LGDiscoverViewController: LGViewController, UITableViewDelegate {
             } else {
                 if isRefreshing != nil {
                     self?.tableView.refreshControl?.endRefreshing()
+                    print("Error message: \(error)")
                 }
             }
         })

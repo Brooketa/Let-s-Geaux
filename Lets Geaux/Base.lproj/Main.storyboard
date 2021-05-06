@@ -149,19 +149,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gj7-Rm-nK7">
-                                                <rect key="frame" x="15" y="245" width="384" height="24"/>
+                                                <rect key="frame" x="15" y="250" width="384" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGo-8U-67J">
-                                                <rect key="frame" x="15" y="279" width="384" height="18"/>
+                                                <rect key="frame" x="15" y="284" width="384" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2E-gS-PGx">
-                                                <rect key="frame" x="15" y="327" width="384" height="15"/>
+                                                <rect key="frame" x="15" y="332" width="384" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="YDS-mu-RxT"/>
                                                 </constraints>
@@ -170,7 +170,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View event:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-gA-V7S">
-                                                <rect key="frame" x="15" y="357" width="384" height="15"/>
+                                                <rect key="frame" x="15" y="362" width="384" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="CKU-ru-A1f"/>
                                                 </constraints>
@@ -184,7 +184,7 @@
                                             <constraint firstAttribute="trailing" secondItem="xOw-eY-sfZ" secondAttribute="trailing" id="0n8-I6-8GP"/>
                                             <constraint firstAttribute="trailing" secondItem="AeX-gA-V7S" secondAttribute="trailing" constant="15" id="32S-vb-2n1"/>
                                             <constraint firstItem="izk-lh-kVW" firstAttribute="top" secondItem="xOw-eY-sfZ" secondAttribute="bottom" constant="20" id="4n5-rs-gfR"/>
-                                            <constraint firstItem="Gj7-Rm-nK7" firstAttribute="top" secondItem="izk-lh-kVW" secondAttribute="bottom" constant="10" id="6Za-ri-m9u"/>
+                                            <constraint firstItem="Gj7-Rm-nK7" firstAttribute="top" secondItem="izk-lh-kVW" secondAttribute="bottom" constant="15" id="6Za-ri-m9u"/>
                                             <constraint firstItem="izk-lh-kVW" firstAttribute="leading" secondItem="uU3-JD-7Sf" secondAttribute="leading" constant="15" id="PHh-uN-sn3"/>
                                             <constraint firstItem="YGo-8U-67J" firstAttribute="top" secondItem="Gj7-Rm-nK7" secondAttribute="bottom" constant="10" id="Rb6-g7-MRQ"/>
                                             <constraint firstItem="AeX-gA-V7S" firstAttribute="top" secondItem="Q2E-gS-PGx" secondAttribute="bottom" constant="15" id="Rlo-eZ-RGg"/>

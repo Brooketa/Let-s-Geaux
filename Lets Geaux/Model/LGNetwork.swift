@@ -15,11 +15,13 @@ class LGNetwork {
             switch response.result {
             case .success(let responseData):
                 guard let data = responseData as? [String:Any] else {
+                    completion(nil,nil)
                     return
                 }
                 completion(data,nil)
                 break
             case .failure(let error):
+                completion(nil, error)
                 print("\(error)")
                 break
             }
