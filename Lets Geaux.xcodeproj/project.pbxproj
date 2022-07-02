@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		701E0B2B2870D1D30050B127 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 701E0B2A2870D1D30050B127 /* Alamofire */; };
 		701E0B2E2870D22D0050B127 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 701E0B2D2870D22D0050B127 /* SDWebImage */; };
+		701E0B322870D9140050B127 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 701E0B312870D9140050B127 /* Resolver */; };
+		701E0B342870D9260050B127 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E0B332870D9260050B127 /* AppModule.swift */; };
+		701E0B372870D9C10050B127 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E0B362870D9C10050B127 /* AppRouter.swift */; };
+		701E0B392870D9DA0050B127 /* AppRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E0B382870D9DA0050B127 /* AppRouterProtocol.swift */; };
 		7076718626249CDA00D8DEF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7076718526249CDA00D8DEF1 /* AppDelegate.swift */; };
 		7076718826249CDA00D8DEF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7076718726249CDA00D8DEF1 /* SceneDelegate.swift */; };
 		7076718A26249CDA00D8DEF1 /* LGDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7076718926249CDA00D8DEF1 /* LGDiscoverViewController.swift */; };
@@ -33,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701E0B332870D9260050B127 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
+		701E0B362870D9C10050B127 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		701E0B382870D9DA0050B127 /* AppRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterProtocol.swift; sourceTree = "<group>"; };
 		7076718226249CDA00D8DEF1 /* Lets Geaux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lets Geaux.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7076718526249CDA00D8DEF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7076718726249CDA00D8DEF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701E0B322870D9140050B127 /* Resolver in Frameworks */,
 				701E0B2E2870D22D0050B127 /* SDWebImage in Frameworks */,
 				701E0B2B2870D1D30050B127 /* Alamofire in Frameworks */,
 			);
@@ -71,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		701E0B352870D9950050B127 /* AppRouter */ = {
+			isa = PBXGroup;
+			children = (
+				701E0B362870D9C10050B127 /* AppRouter.swift */,
+				701E0B382870D9DA0050B127 /* AppRouterProtocol.swift */,
+			);
+			path = AppRouter;
+			sourceTree = "<group>";
+		};
 		7076717926249CDA00D8DEF1 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +107,7 @@
 		7076718426249CDA00D8DEF1 /* Lets Geaux */ = {
 			isa = PBXGroup;
 			children = (
+				701E0B352870D9950050B127 /* AppRouter */,
 				707671A02624AE2B00D8DEF1 /* Model */,
 				7083A9602628962100B30947 /* LGViewController.swift */,
 				70E3FBCC2626161500CAE881 /* Discover */,
@@ -100,6 +118,7 @@
 				70772834262729B500D9909A /* Utils */,
 				7076718526249CDA00D8DEF1 /* AppDelegate.swift */,
 				7076718726249CDA00D8DEF1 /* SceneDelegate.swift */,
+				701E0B332870D9260050B127 /* AppModule.swift */,
 				7076718B26249CDA00D8DEF1 /* Main.storyboard */,
 				7076718E26249CDD00D8DEF1 /* Assets.xcassets */,
 				7076719026249CDD00D8DEF1 /* LaunchScreen.storyboard */,
@@ -215,6 +234,7 @@
 			packageProductDependencies = (
 				701E0B2A2870D1D30050B127 /* Alamofire */,
 				701E0B2D2870D22D0050B127 /* SDWebImage */,
+				701E0B312870D9140050B127 /* Resolver */,
 			);
 			productName = "Let's Geaux";
 			productReference = 7076718226249CDA00D8DEF1 /* Lets Geaux.app */;
@@ -246,6 +266,7 @@
 			packageReferences = (
 				701E0B292870D1D30050B127 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				701E0B2C2870D22D0050B127 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				701E0B302870D9140050B127 /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = 7076718326249CDA00D8DEF1 /* Products */;
 			projectDirPath = "";
@@ -278,8 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				70D650B12628591800777ECD /* LGNewsViewController.swift in Sources */,
+				701E0B342870D9260050B127 /* AppModule.swift in Sources */,
 				7076718A26249CDA00D8DEF1 /* LGDiscoverViewController.swift in Sources */,
 				707671A22624AE5300D8DEF1 /* LGNews.swift in Sources */,
+				701E0B392870D9DA0050B127 /* AppRouterProtocol.swift in Sources */,
 				7076718626249CDA00D8DEF1 /* AppDelegate.swift in Sources */,
 				7083A95626287E5D00B30947 /* LGDiscoverTableViewSectionHeader.swift in Sources */,
 				70F616232628D2BA0072F8BC /* LGStringExtensions.swift in Sources */,
@@ -291,6 +314,7 @@
 				70772836262729D100D9909A /* LGAppearanceUtils.swift in Sources */,
 				70E3FBD72626169D00CAE881 /* LGWhatsUpCollectionViewCell.swift in Sources */,
 				7076718826249CDA00D8DEF1 /* SceneDelegate.swift in Sources */,
+				701E0B372870D9C10050B127 /* AppRouter.swift in Sources */,
 				7083A9612628962100B30947 /* LGViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +466,7 @@
 				DEVELOPMENT_TEAM = 4KC5LNQ77T;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Lets Geaux/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,6 +487,7 @@
 				DEVELOPMENT_TEAM = 4KC5LNQ77T;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Lets Geaux/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,6 +539,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		701E0B302870D9140050B127 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -525,6 +559,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 701E0B2C2870D22D0050B127 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		701E0B312870D9140050B127 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 701E0B302870D9140050B127 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
