@@ -1,13 +1,6 @@
-//
-//  LGNews.swift
-//  Let's Geaux
-//
-//  Created by Brooketa on 12.04.2021..
-//
-
 import Foundation
 
-struct LGNews {
+struct News {
     var imageURL:String
     var createdAt: String
     var caption: String

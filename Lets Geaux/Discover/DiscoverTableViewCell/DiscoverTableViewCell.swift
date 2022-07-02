@@ -1,34 +1,25 @@
-//
-//  LGDiscoverTableViewCell.swift
-//  Lets Geaux
-//
-//  Created by Brooketa on 13.04.2021..
-//
-
 import UIKit
 
-protocol LGDiscoverTableViewCellDelegate: AnyObject {
+protocol DiscoverTableViewCellDelegate: AnyObject {
     func didSelectCell(indexPath:IndexPath)
 }
 
-struct LGDiscoverTableViewConstants {
+struct DiscoverTableViewConstants {
     static let widthScaleFactor:CGFloat = 0.8
     static let cellAspectRatio:CGFloat = 1.2
 }
 
-class LGDiscoverTableViewCell: UITableViewCell {
-    
+class DiscoverTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    static let cellIdentifier = "LGDiscoverTableViewCell"
 
-    weak var delegate:LGDiscoverTableViewCellDelegate? = nil
-    
+    static let cellIdentifier = "DiscoverTableViewCell"
+
+    weak var delegate: DiscoverTableViewCellDelegate? = nil
+
     let layout = UICollectionViewFlowLayout()
-        
-    var news:[LGNews] = [] {
+
+    var news:[News] = [] {
         didSet {
             collectionView.reloadData()
         }
@@ -43,25 +34,25 @@ class LGDiscoverTableViewCell: UITableViewCell {
     }
     
     static func nib() -> UINib {
-        return UINib(nibName: "LGDiscoverTableViewCell", bundle: nil)
+        return UINib(nibName: "DiscoverTableViewCell", bundle: nil)
     }
     
-    public func configure(news: [LGNews], frameWidth: CGFloat) {
+    public func configure(news: [News], frameWidth: CGFloat) {
         self.news = news
         configureCollectionView(frameWidth: frameWidth)
     }
     
     private func configureCollectionView(frameWidth: CGFloat) {
         //Collection View delegate configuration
-        collectionView.register(LGWhatsUpCollectionViewCell.nib(), forCellWithReuseIdentifier: LGWhatsUpCollectionViewCell.cellIdentifier)
+        collectionView.register(WhatsUpCollectionViewCell.nib(), forCellWithReuseIdentifier: WhatsUpCollectionViewCell.cellIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         
         //Collection View appearance configuration
-        let itemSize = CGSize(width: frameWidth * LGDiscoverTableViewConstants.widthScaleFactor,
-                              height: frameWidth * LGDiscoverTableViewConstants.widthScaleFactor * LGDiscoverTableViewConstants.cellAspectRatio)
+        let itemSize = CGSize(width: frameWidth * DiscoverTableViewConstants.widthScaleFactor,
+                              height: frameWidth * DiscoverTableViewConstants.widthScaleFactor * DiscoverTableViewConstants.cellAspectRatio)
         
-        let insetSize = (frameWidth - frameWidth * LGDiscoverTableViewConstants.widthScaleFactor) / 2
+        let insetSize = (frameWidth - frameWidth * DiscoverTableViewConstants.widthScaleFactor) / 2
 
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 25
@@ -77,7 +68,7 @@ class LGDiscoverTableViewCell: UITableViewCell {
 
 //MARK: UICollectionViewDelegate
 
-extension LGDiscoverTableViewCell: UICollectionViewDelegate {
+extension DiscoverTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didSelectCell(indexPath: indexPath)
     }
@@ -85,14 +76,14 @@ extension LGDiscoverTableViewCell: UICollectionViewDelegate {
 
 //MARK: UICollectionViewDataSource
 
-extension LGDiscoverTableViewCell: UICollectionViewDataSource {
+extension DiscoverTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return news.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LGWhatsUpCollectionViewCell.cellIdentifier, for: indexPath) as! LGWhatsUpCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WhatsUpCollectionViewCell.cellIdentifier, for: indexPath) as! WhatsUpCollectionViewCell
         cell.configure(with: news[indexPath.row])
 
         return cell
@@ -101,7 +92,7 @@ extension LGDiscoverTableViewCell: UICollectionViewDataSource {
 
 //MARK: UIScrollViewDelegate
 
-extension LGDiscoverTableViewCell: UIScrollViewDelegate {
+extension DiscoverTableViewCell: UIScrollViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let layout = self.collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
         

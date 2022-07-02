@@ -1,18 +1,8 @@
-//
-//  LGViewController.swift
-//  Lets Geaux
-//
-//  Created by Brooketa on 15.04.2021..
-//
-
 import UIKit
 
-class LGViewController: UIViewController {
+extension UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //NavigationBar configuration
+    func defaultNavigationAppearance() {
         navigationItem.largeTitleDisplayMode = .always
         let favouritesButton = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         let profileButton = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: UIBarButtonItem.Style.plain, target: nil, action: nil)

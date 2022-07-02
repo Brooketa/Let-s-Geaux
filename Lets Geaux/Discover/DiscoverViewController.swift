@@ -7,17 +7,19 @@
 
 import UIKit
 
-class LGDiscoverViewController: LGViewController, UITableViewDelegate {
+class DiscoverViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
         
-    var news:[LGNews]?
+    var news:[News]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        defaultNavigationAppearance()
+
         //Table View Configuration
-        tableView.register(LGDiscoverTableViewCell.nib(), forCellReuseIdentifier: LGDiscoverTableViewCell.cellIdentifier)
+        tableView.register(DiscoverTableViewCell.nib(), forCellReuseIdentifier: DiscoverTableViewCell.cellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.refreshControl = UIRefreshControl(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
@@ -28,7 +30,7 @@ class LGDiscoverViewController: LGViewController, UITableViewDelegate {
     }
     
     @objc func fetch() {
-        LGWebService.fetchNews(completion: { [weak self] news, error in
+        WebService.fetchNews(completion: { [weak self] news, error in
             let isRefreshing = self?.tableView.refreshControl?.isRefreshing
             if error == nil {
                 guard let news = news else { return }
@@ -42,7 +44,6 @@ class LGDiscoverViewController: LGViewController, UITableViewDelegate {
             } else {
                 if isRefreshing != nil {
                     self?.tableView.refreshControl?.endRefreshing()
-                    print("Error message: \(error)")
                 }
             }
         })
@@ -51,7 +52,7 @@ class LGDiscoverViewController: LGViewController, UITableViewDelegate {
 
 //MARK: UITableViewDataSource
 
-extension LGDiscoverViewController: UITableViewDataSource {
+extension DiscoverViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -62,7 +63,7 @@ extension LGDiscoverViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = Bundle.main.loadNibNamed(LGDiscoverTableViewSectionHeader.nibName(), owner: self, options: nil)?.first as? LGDiscoverTableViewSectionHeader else { return nil }
+        guard let header = Bundle.main.loadNibNamed(DiscoverTableViewSectionHeader.nibName(), owner: self, options: nil)?.first as? DiscoverTableViewSectionHeader else { return nil }
         
         header.configure(sectionTitleName: "What's Up?", buttonTitleName: "All news")
         
@@ -74,7 +75,7 @@ extension LGDiscoverViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: LGDiscoverTableViewCell.cellIdentifier) as! LGDiscoverTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: DiscoverTableViewCell.cellIdentifier) as! DiscoverTableViewCell
         
         if news?.count ?? 0 > 0 {
             cell.configure(news: news!, frameWidth: view.frame.size.width)
@@ -89,21 +90,19 @@ extension LGDiscoverViewController: UITableViewDataSource {
     }
 }
 
-//MARK: LGDiscoverTableViewCellDelegate
+//MARK: DiscoverTableViewCellDelegate
 
-extension LGDiscoverViewController: LGDiscoverTableViewCellDelegate {
+extension DiscoverViewController: DiscoverTableViewCellDelegate {
     func didSelectCell(indexPath: IndexPath) {
         if let newsItem = news?[indexPath.row] {
-            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            guard let newsViewController = storyboard.instantiateViewController(identifier: LGNewsViewController.identifier) as? LGNewsViewController else { return }
+            guard let newsViewController = storyboard.instantiateViewController(identifier: NewsViewController.identifier) as? NewsViewController else { return }
             newsViewController.navigationItem.title = "News"
             newsViewController.hidesBottomBarWhenPushed = true
             
             newsViewController.news = newsItem
             self.navigationController?.pushViewController(newsViewController, animated: true)
-            
         }
     }
 }

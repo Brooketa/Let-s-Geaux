@@ -1,10 +1,3 @@
-//
-//  LGStringExtensions.swift
-//  Lets Geaux
-//
-//  Created by Brooketa on 15.04.2021..
-//
-
 import Foundation
 
 extension String {
@@ -25,7 +18,6 @@ extension String {
         }
 
         self.init(attributedString.string)
-
     }
 
 }
