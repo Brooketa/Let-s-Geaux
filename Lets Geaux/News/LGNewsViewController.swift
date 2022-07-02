@@ -25,7 +25,7 @@ class LGNewsViewController: LGViewController {
         
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.rightBarButtonItems = nil
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
         
         scrollView.alwaysBounceVertical = true
         scrollView.alwaysBounceHorizontal = false
@@ -34,7 +34,6 @@ class LGNewsViewController: LGViewController {
     
     override func viewDidLayoutSubviews() {
         loadNewsData()
-        scrollView.contentSize = CGSize(width: 0, height: scrollView.contentSize.height)
     }
     
     func loadNewsData() {
@@ -46,6 +45,4 @@ class LGNewsViewController: LGViewController {
         descriptionLabel.text = news.description
         publishedLabel.text = "Published: \(news.createdAt)"
     }
-
-
 }
