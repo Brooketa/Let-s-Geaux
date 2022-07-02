@@ -1,13 +1,4 @@
-//
-//  LGWebService.swift
-//  Let's Geaux
-//
-//  Created by Brooketa on 12.04.2021..
-//
-
 import Foundation
-
-
 
 struct APIConstants {
     static let venueRequestURL = "https://api.ajmo.hr/v3/venue/dashboard"
@@ -16,13 +7,13 @@ struct APIConstants {
     static let newsRequestURL = "https://api.ajmo.hr/v3/news/index?isPromoted=0&amp;page=1&amp;perPage=10"
 }
 
-class LGWebService {
+class WebService {
     
-    static func fetchNews(completion: @escaping ([LGNews]?, Error?) -> Void) {
+    static func fetchNews(completion: @escaping ([News]?, Error?) -> Void) {
         
         guard let newsURL = URL(string: APIConstants.newsRequestURL) else { return }
         
-        LGNetwork.request(url: newsURL, completion: { data, error in
+        Network.request(url: newsURL, completion: { data, error in
             
             if let error = error {
                 print("Finished with error: \(error.localizedDescription)")
@@ -40,10 +31,10 @@ class LGWebService {
                 return
             }
             
-            var newsArray:[LGNews] = [LGNews]()
+            var newsArray:[News] = [News]()
             
             for news in newsData {
-                newsArray.append(LGNews(with: news))
+                newsArray.append(News(with: news))
             }
             completion(newsArray, nil)
         })

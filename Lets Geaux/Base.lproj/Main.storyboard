@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="65s-CG-rrP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="65s-CG-rrP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,7 +31,7 @@
         <!--Discover-->
         <scene sceneID="phq-3z-SQi">
             <objects>
-                <viewController storyboardIdentifier="LGDiscoverViewController" title="Discover" id="a7A-2T-zu8" customClass="LGDiscoverViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiscoverViewController" title="Discover" id="a7A-2T-zu8" customClass="DiscoverViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AWt-NW-HV0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,7 +91,7 @@
         <!--Near me-->
         <scene sceneID="ARJ-Uk-0pp">
             <objects>
-                <viewController id="ggg-Lg-tv5" customClass="LGNearMeViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ggg-Lg-tv5" customClass="NearMeViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vgT-Gi-VQS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,7 +107,7 @@
         <!--Prizes-->
         <scene sceneID="J4d-uf-dHx">
             <objects>
-                <viewController id="tjQ-4Q-VLy" customClass="LGPrizesViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tjQ-4Q-VLy" customClass="PrizesViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GTb-h5-Ucg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +123,7 @@
         <!--News-->
         <scene sceneID="kcj-UB-hV9">
             <objects>
-                <viewController storyboardIdentifier="LGNewsViewController" title="News" id="2E4-Y5-rT2" customClass="LGNewsViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsViewController" title="News" id="2E4-Y5-rT2" customClass="NewsViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LBZ-dv-7YC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -1,33 +1,26 @@
-//
-//  LGWhatsUpCollectionViewCell.swift
-//  Lets Geaux
-//
-//  Created by Brooketa on 13.04.2021..
-//
-
 import UIKit
 import SDWebImage
 
-class LGWhatsUpCollectionViewCell: UICollectionViewCell {
+class WhatsUpCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var publishedLabel: UILabel!
     
-    static let cellIdentifier = "LGWhatsUpCollectionViewCell"
+    static let cellIdentifier = "WhatsUpCollectionViewCell"
     
-    let eventAttributes = [NSAttributedString.Key.foregroundColor : LGAppearanceUtils.turquoise, NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 13)]
+    let eventAttributes = [NSAttributedString.Key.foregroundColor : AppearanceUtils.turquoise, NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 13)]
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     static func nib() -> UINib {
-        return UINib(nibName: "LGWhatsUpCollectionViewCell", bundle: nil)
+        return UINib(nibName: "WhatsUpCollectionViewCell", bundle: nil)
     }
     
-    public func configure(with news: LGNews) {
+    public func configure(with news: News) {
         newsImageView.sd_setImage(with: URL(string: news.imageURL), placeholderImage: nil, options: SDWebImageOptions.highPriority, completed: nil)
         titleLabel.text = news.title
         captionLabel.text = news.caption
