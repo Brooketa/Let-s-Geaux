@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		701E0B2B2870D1D30050B127 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 701E0B2A2870D1D30050B127 /* Alamofire */; };
-		701E0B2E2870D22D0050B127 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 701E0B2D2870D22D0050B127 /* SDWebImage */; };
 		701E0B322870D9140050B127 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 701E0B312870D9140050B127 /* Resolver */; };
 		701E0B342870D9260050B127 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E0B332870D9260050B127 /* AppModule.swift */; };
 		701E0B372870D9C10050B127 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E0B362870D9C10050B127 /* AppRouter.swift */; };
@@ -24,14 +23,16 @@
 		707671A82624AEA600D8DEF1 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707671A72624AEA600D8DEF1 /* WebService.swift */; };
 		70772836262729D100D9909A /* AppearanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70772835262729D000D9909A /* AppearanceUtils.swift */; };
 		7083A95626287E5D00B30947 /* DiscoverTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083A95526287E5D00B30947 /* DiscoverTableViewSectionHeader.swift */; };
-		7083A95A26287F2600B30947 /* DiscoverTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7083A95926287F2600B30947 /* DiscoverTableViewSectionHeader.xib */; };
 		7083A9612628962100B30947 /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083A9602628962100B30947 /* ViewController+Extensions.swift */; };
+		70C4B69E28724D110057AC77 /* DiscoverTableViewSectionHeader+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C4B69D28724D110057AC77 /* DiscoverTableViewSectionHeader+Design.swift */; };
 		70D3E9FA2871B463005D0115 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70D3E9F92871B463005D0115 /* SnapKit */; };
+		70D3E9FF2871B782005D0115 /* DiscoverCollectionViewCell+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3E9FE2871B782005D0115 /* DiscoverCollectionViewCell+Design.swift */; };
+		70D3EA022871B7B1005D0115 /* ConstructViewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3EA012871B7B1005D0115 /* ConstructViewsProtocol.swift */; };
+		70D3EA052871C534005D0115 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 70D3EA042871C534005D0115 /* Kingfisher */; };
 		70D650B12628591800777ECD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D650B02628591800777ECD /* NewsViewController.swift */; };
 		70E3FBD02626166600CAE881 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FBCE2626166600CAE881 /* DiscoverTableViewCell.swift */; };
 		70E3FBD12626166600CAE881 /* DiscoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E3FBCF2626166600CAE881 /* DiscoverTableViewCell.xib */; };
-		70E3FBD72626169D00CAE881 /* WhatsUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FBD52626169D00CAE881 /* WhatsUpCollectionViewCell.swift */; };
-		70E3FBD82626169D00CAE881 /* WhatsUpCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E3FBD62626169D00CAE881 /* WhatsUpCollectionViewCell.xib */; };
+		70E3FBD72626169D00CAE881 /* DiscoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FBD52626169D00CAE881 /* DiscoverCollectionViewCell.swift */; };
 		70F616232628D2BA0072F8BC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F616222628D2BA0072F8BC /* String+Extensions.swift */; };
 		70FD4B0126289A6D0049EA5B /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD4B0026289A6D0049EA5B /* NearMeViewController.swift */; };
 		70FD4B0426289A830049EA5B /* PrizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD4B0326289A830049EA5B /* PrizesViewController.swift */; };
@@ -54,13 +55,14 @@
 		707671A72624AEA600D8DEF1 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		70772835262729D000D9909A /* AppearanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUtils.swift; sourceTree = "<group>"; };
 		7083A95526287E5D00B30947 /* DiscoverTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewSectionHeader.swift; sourceTree = "<group>"; };
-		7083A95926287F2600B30947 /* DiscoverTableViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverTableViewSectionHeader.xib; sourceTree = "<group>"; };
 		7083A9602628962100B30947 /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
+		70C4B69D28724D110057AC77 /* DiscoverTableViewSectionHeader+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverTableViewSectionHeader+Design.swift"; sourceTree = "<group>"; };
+		70D3E9FE2871B782005D0115 /* DiscoverCollectionViewCell+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverCollectionViewCell+Design.swift"; sourceTree = "<group>"; };
+		70D3EA012871B7B1005D0115 /* ConstructViewsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructViewsProtocol.swift; sourceTree = "<group>"; };
 		70D650B02628591800777ECD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		70E3FBCE2626166600CAE881 /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		70E3FBCF2626166600CAE881 /* DiscoverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverTableViewCell.xib; sourceTree = "<group>"; };
-		70E3FBD52626169D00CAE881 /* WhatsUpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsUpCollectionViewCell.swift; sourceTree = "<group>"; };
-		70E3FBD62626169D00CAE881 /* WhatsUpCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhatsUpCollectionViewCell.xib; sourceTree = "<group>"; };
+		70E3FBD52626169D00CAE881 /* DiscoverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewCell.swift; sourceTree = "<group>"; };
 		70F616222628D2BA0072F8BC /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		70FD4B0026289A6D0049EA5B /* NearMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
 		70FD4B0326289A830049EA5B /* PrizesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizesViewController.swift; sourceTree = "<group>"; };
@@ -73,8 +75,8 @@
 			files = (
 				701E0B322870D9140050B127 /* Resolver in Frameworks */,
 				70D3E9FA2871B463005D0115 /* SnapKit in Frameworks */,
-				701E0B2E2870D22D0050B127 /* SDWebImage in Frameworks */,
 				701E0B2B2870D1D30050B127 /* Alamofire in Frameworks */,
+				70D3EA052871C534005D0115 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +111,7 @@
 		7076718426249CDA00D8DEF1 /* Lets Geaux */ = {
 			isa = PBXGroup;
 			children = (
+				70D3EA002871B7A5005D0115 /* Shared */,
 				701E0B352870D9950050B127 /* AppRouter */,
 				707671A02624AE2B00D8DEF1 /* Model */,
 				70E3FBCC2626161500CAE881 /* Discover */,
@@ -150,9 +153,17 @@
 			isa = PBXGroup;
 			children = (
 				7083A95526287E5D00B30947 /* DiscoverTableViewSectionHeader.swift */,
-				7083A95926287F2600B30947 /* DiscoverTableViewSectionHeader.xib */,
+				70C4B69D28724D110057AC77 /* DiscoverTableViewSectionHeader+Design.swift */,
 			);
 			path = DiscoverTableViewSectionHeader;
+			sourceTree = "<group>";
+		};
+		70D3EA002871B7A5005D0115 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				70D3EA012871B7B1005D0115 /* ConstructViewsProtocol.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		70D650AF2628590400777ECD /* News */ = {
@@ -169,7 +180,7 @@
 				7076718926249CDA00D8DEF1 /* DiscoverViewController.swift */,
 				7083A95426287E4100B30947 /* DiscoverTableViewSectionHeader */,
 				70E3FBCD2626162C00CAE881 /* DiscoverTableViewCell */,
-				70E3FBD42626166F00CAE881 /* WhatsUpCollectionViewCell */,
+				70E3FBD42626166F00CAE881 /* DiscoverCollectionViewCell */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -183,13 +194,13 @@
 			path = DiscoverTableViewCell;
 			sourceTree = "<group>";
 		};
-		70E3FBD42626166F00CAE881 /* WhatsUpCollectionViewCell */ = {
+		70E3FBD42626166F00CAE881 /* DiscoverCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				70E3FBD52626169D00CAE881 /* WhatsUpCollectionViewCell.swift */,
-				70E3FBD62626169D00CAE881 /* WhatsUpCollectionViewCell.xib */,
+				70E3FBD52626169D00CAE881 /* DiscoverCollectionViewCell.swift */,
+				70D3E9FE2871B782005D0115 /* DiscoverCollectionViewCell+Design.swift */,
 			);
-			path = WhatsUpCollectionViewCell;
+			path = DiscoverCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		70F616212628D2880072F8BC /* Extensions */ = {
@@ -235,9 +246,9 @@
 			name = "Lets Geaux";
 			packageProductDependencies = (
 				701E0B2A2870D1D30050B127 /* Alamofire */,
-				701E0B2D2870D22D0050B127 /* SDWebImage */,
 				701E0B312870D9140050B127 /* Resolver */,
 				70D3E9F92871B463005D0115 /* SnapKit */,
+				70D3EA042871C534005D0115 /* Kingfisher */,
 			);
 			productName = "Let's Geaux";
 			productReference = 7076718226249CDA00D8DEF1 /* Lets Geaux.app */;
@@ -268,9 +279,9 @@
 			mainGroup = 7076717926249CDA00D8DEF1;
 			packageReferences = (
 				701E0B292870D1D30050B127 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				701E0B2C2870D22D0050B127 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				701E0B302870D9140050B127 /* XCRemoteSwiftPackageReference "Resolver" */,
 				70D3E9F82871B463005D0115 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				70D3EA032871C534005D0115 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 7076718326249CDA00D8DEF1 /* Products */;
 			projectDirPath = "";
@@ -286,12 +297,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7083A95A26287F2600B30947 /* DiscoverTableViewSectionHeader.xib in Resources */,
 				7076719226249CDD00D8DEF1 /* LaunchScreen.storyboard in Resources */,
 				70E3FBD12626166600CAE881 /* DiscoverTableViewCell.xib in Resources */,
 				7076718F26249CDD00D8DEF1 /* Assets.xcassets in Resources */,
 				7076718D26249CDA00D8DEF1 /* Main.storyboard in Resources */,
-				70E3FBD82626169D00CAE881 /* WhatsUpCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +311,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C4B69E28724D110057AC77 /* DiscoverTableViewSectionHeader+Design.swift in Sources */,
+				70D3EA022871B7B1005D0115 /* ConstructViewsProtocol.swift in Sources */,
 				70D650B12628591800777ECD /* NewsViewController.swift in Sources */,
 				701E0B342870D9260050B127 /* AppModule.swift in Sources */,
 				7076718A26249CDA00D8DEF1 /* DiscoverViewController.swift in Sources */,
@@ -310,13 +321,14 @@
 				7076718626249CDA00D8DEF1 /* AppDelegate.swift in Sources */,
 				7083A95626287E5D00B30947 /* DiscoverTableViewSectionHeader.swift in Sources */,
 				70F616232628D2BA0072F8BC /* String+Extensions.swift in Sources */,
+				70D3E9FF2871B782005D0115 /* DiscoverCollectionViewCell+Design.swift in Sources */,
 				707671A82624AEA600D8DEF1 /* WebService.swift in Sources */,
 				70FD4B0426289A830049EA5B /* PrizesViewController.swift in Sources */,
 				70E3FBD02626166600CAE881 /* DiscoverTableViewCell.swift in Sources */,
 				70FD4B0126289A6D0049EA5B /* NearMeViewController.swift in Sources */,
 				707671A52624AE7A00D8DEF1 /* Network.swift in Sources */,
 				70772836262729D100D9909A /* AppearanceUtils.swift in Sources */,
-				70E3FBD72626169D00CAE881 /* WhatsUpCollectionViewCell.swift in Sources */,
+				70E3FBD72626169D00CAE881 /* DiscoverCollectionViewCell.swift in Sources */,
 				7076718826249CDA00D8DEF1 /* SceneDelegate.swift in Sources */,
 				701E0B372870D9C10050B127 /* AppRouter.swift in Sources */,
 				7083A9612628962100B30947 /* ViewController+Extensions.swift in Sources */,
@@ -535,14 +547,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		701E0B2C2870D22D0050B127 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		701E0B302870D9140050B127 /* XCRemoteSwiftPackageReference "Resolver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hmlongco/Resolver";
@@ -559,6 +563,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		70D3EA032871C534005D0115 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -566,11 +578,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 701E0B292870D1D30050B127 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		701E0B2D2870D22D0050B127 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 701E0B2C2870D22D0050B127 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
 		};
 		701E0B312870D9140050B127 /* Resolver */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -581,6 +588,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 70D3E9F82871B463005D0115 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		70D3EA042871C534005D0115 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70D3EA032871C534005D0115 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -19,6 +19,8 @@ class DiscoverViewController: UIViewController, UITableViewDelegate {
         defaultNavigationAppearance()
 
         //Table View Configuration
+        tableView.register(DiscoverTableViewSectionHeader.self,
+               forHeaderFooterViewReuseIdentifier: DiscoverTableViewSectionHeader.identifier)
         tableView.register(DiscoverTableViewCell.nib(), forCellReuseIdentifier: DiscoverTableViewCell.cellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -63,8 +65,8 @@ extension DiscoverViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = Bundle.main.loadNibNamed(DiscoverTableViewSectionHeader.nibName(), owner: self, options: nil)?.first as? DiscoverTableViewSectionHeader else { return nil }
-        
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: DiscoverTableViewSectionHeader.identifier) as? DiscoverTableViewSectionHeader else { return nil }
+
         header.configure(sectionTitleName: "What's Up?", buttonTitleName: "All news")
         
         return header
