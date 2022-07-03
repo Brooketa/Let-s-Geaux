@@ -26,6 +26,7 @@
 		7083A95626287E5D00B30947 /* DiscoverTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083A95526287E5D00B30947 /* DiscoverTableViewSectionHeader.swift */; };
 		7083A95A26287F2600B30947 /* DiscoverTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7083A95926287F2600B30947 /* DiscoverTableViewSectionHeader.xib */; };
 		7083A9612628962100B30947 /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083A9602628962100B30947 /* ViewController+Extensions.swift */; };
+		70D3E9FA2871B463005D0115 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70D3E9F92871B463005D0115 /* SnapKit */; };
 		70D650B12628591800777ECD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D650B02628591800777ECD /* NewsViewController.swift */; };
 		70E3FBD02626166600CAE881 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FBCE2626166600CAE881 /* DiscoverTableViewCell.swift */; };
 		70E3FBD12626166600CAE881 /* DiscoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E3FBCF2626166600CAE881 /* DiscoverTableViewCell.xib */; };
@@ -71,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				701E0B322870D9140050B127 /* Resolver in Frameworks */,
+				70D3E9FA2871B463005D0115 /* SnapKit in Frameworks */,
 				701E0B2E2870D22D0050B127 /* SDWebImage in Frameworks */,
 				701E0B2B2870D1D30050B127 /* Alamofire in Frameworks */,
 			);
@@ -235,6 +237,7 @@
 				701E0B2A2870D1D30050B127 /* Alamofire */,
 				701E0B2D2870D22D0050B127 /* SDWebImage */,
 				701E0B312870D9140050B127 /* Resolver */,
+				70D3E9F92871B463005D0115 /* SnapKit */,
 			);
 			productName = "Let's Geaux";
 			productReference = 7076718226249CDA00D8DEF1 /* Lets Geaux.app */;
@@ -267,6 +270,7 @@
 				701E0B292870D1D30050B127 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				701E0B2C2870D22D0050B127 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				701E0B302870D9140050B127 /* XCRemoteSwiftPackageReference "Resolver" */,
+				70D3E9F82871B463005D0115 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 7076718326249CDA00D8DEF1 /* Products */;
 			projectDirPath = "";
@@ -547,6 +551,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		70D3E9F82871B463005D0115 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -564,6 +576,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 701E0B302870D9140050B127 /* XCRemoteSwiftPackageReference "Resolver" */;
 			productName = Resolver;
+		};
+		70D3E9F92871B463005D0115 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70D3E9F82871B463005D0115 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
