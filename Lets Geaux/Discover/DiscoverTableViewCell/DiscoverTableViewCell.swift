@@ -24,40 +24,42 @@ class DiscoverTableViewCell: UITableViewCell {
             collectionView.reloadData()
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
+
     static func nib() -> UINib {
         return UINib(nibName: "DiscoverTableViewCell", bundle: nil)
     }
-    
+
     public func configure(news: [News], frameWidth: CGFloat) {
         self.news = news
         configureCollectionView(frameWidth: frameWidth)
     }
-    
+
     private func configureCollectionView(frameWidth: CGFloat) {
         //Collection View delegate configuration
-        collectionView.register(WhatsUpCollectionViewCell.nib(), forCellWithReuseIdentifier: WhatsUpCollectionViewCell.cellIdentifier)
+        collectionView.register(
+            DiscoverCollectionViewCell.self,
+            forCellWithReuseIdentifier: DiscoverCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+
         //Collection View appearance configuration
         let itemSize = CGSize(width: frameWidth * DiscoverTableViewConstants.widthScaleFactor,
                               height: frameWidth * DiscoverTableViewConstants.widthScaleFactor * DiscoverTableViewConstants.cellAspectRatio)
-        
+
         let insetSize = (frameWidth - frameWidth * DiscoverTableViewConstants.widthScaleFactor) / 2
 
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 25
         layout.itemSize = itemSize
-        
+
         collectionView.collectionViewLayout = layout
         collectionView.decelerationRate = .fast
         collectionView.bounces = true
@@ -83,8 +85,11 @@ extension DiscoverTableViewCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WhatsUpCollectionViewCell.cellIdentifier, for: indexPath) as! WhatsUpCollectionViewCell
-        cell.configure(with: news[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: DiscoverCollectionViewCell.identifier,
+            for: indexPath) as! DiscoverCollectionViewCell
+
+        cell.set(with: news[indexPath.row])
 
         return cell
     }
@@ -95,7 +100,7 @@ extension DiscoverTableViewCell: UICollectionViewDataSource {
 extension DiscoverTableViewCell: UIScrollViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let layout = self.collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
-        
+
         let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
 
         var offset = targetContentOffset.pointee
