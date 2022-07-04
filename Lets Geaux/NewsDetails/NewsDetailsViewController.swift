@@ -13,8 +13,6 @@ class NewsDetailsViewController: UIViewController {
 
     static let identifier = "NewsViewController"
 
-    var model: News? = nil
-
     init() {
         super.init(nibName: nil, bundle: nil)
 
@@ -28,15 +26,14 @@ class NewsDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         buildViews()
-        set()
     }
 
-    func set() {
-        newsImageView.kf.setImage(with: URL(string: model!.imageURL))
+    func set(with viewModel: NewsViewModel) {
+        newsImageView.kf.setImage(with: viewModel.imageURL)
         eventLabel.text = "Event"
-        titleLabel.text = model!.title
-        descriptionLabel.text = model!.description
-        publishedLabel.text = "Published: \(model!.createdAt)"
+        titleLabel.text = viewModel.title
+        descriptionLabel.text = viewModel.description
+        publishedLabel.text = "Published: \(viewModel.createdAt)"
     }
 
 }

@@ -13,6 +13,11 @@ class AppModule {
         container.resolve()
     }()
 
+    func start(in window: UIWindow) {
+        appRouter.start(in: window)
+        appRouter.showDiscover()
+    }
+
 }
 
 private extension AppModule {
@@ -61,7 +66,15 @@ private extension AppModule {
             .scope(.unique)
     }
 
-    private func registerViewControllers(in container: Resolver) {}
+    private func registerViewControllers(in container: Resolver) {
+        container
+            .register { DiscoverViewController(presenter: container.resolve()) }
+            .scope(.unique)
+
+        container
+            .register { NewsDetailsViewController() }
+            .scope(.unique)
+    }
 
     private func registerAppRouter(in container: Resolver) {
         container

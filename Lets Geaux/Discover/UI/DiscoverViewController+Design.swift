@@ -31,11 +31,10 @@ extension DiscoverViewController: ConstructViewsProtocol {
     
     func styleViews() {
         defaultNavigationAppearance()
+        title = "Discover"
+        view.backgroundColor = AppearanceUtils.lightGrey
 
-        collectionView.alwaysBounceHorizontal = true
-        collectionView.bounces = true
-        collectionView.decelerationRate = .fast
-        collectionView.isPagingEnabled = true
+        collectionView.backgroundColor = AppearanceUtils.lightGrey
         collectionView.showsVerticalScrollIndicator = false
     }
 
