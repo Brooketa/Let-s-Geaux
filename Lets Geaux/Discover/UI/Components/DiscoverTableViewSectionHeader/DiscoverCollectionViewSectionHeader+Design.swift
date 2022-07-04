@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-extension DiscoverTableViewSectionHeader: ConstructViewsProtocol {
+extension DiscoverCollectionViewSectionHeader: ConstructViewsProtocol {
 
     func buildViews() {
         createViews()

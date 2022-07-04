@@ -1,6 +1,6 @@
 import Foundation
 
-struct NewsViewModel {
+struct NewsViewModel: Hashable {
 
     var imageURL: URL?
     var createdAt: Date

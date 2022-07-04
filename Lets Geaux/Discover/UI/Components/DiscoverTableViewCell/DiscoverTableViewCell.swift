@@ -4,11 +4,6 @@ protocol DiscoverTableViewCellDelegate: AnyObject {
     func didSelectCell(indexPath:IndexPath)
 }
 
-struct DiscoverTableViewConstants {
-    static let widthScaleFactor:CGFloat = 0.8
-    static let cellAspectRatio:CGFloat = 1.2
-}
-
 class DiscoverTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -51,20 +46,20 @@ class DiscoverTableViewCell: UITableViewCell {
         collectionView.dataSource = self
 
         //Collection View appearance configuration
-        let itemSize = CGSize(width: frameWidth * DiscoverTableViewConstants.widthScaleFactor,
-                              height: frameWidth * DiscoverTableViewConstants.widthScaleFactor * DiscoverTableViewConstants.cellAspectRatio)
-
-        let insetSize = (frameWidth - frameWidth * DiscoverTableViewConstants.widthScaleFactor) / 2
+//        let itemSize = CGSize(width: frameWidth * DiscoverTableViewConstants.widthScaleFactor,
+//                              height: frameWidth * DiscoverTableViewConstants.widthScaleFactor * DiscoverTableViewConstants.cellAspectRatio)
+//
+//        let insetSize = (frameWidth - frameWidth * DiscoverTableViewConstants.widthScaleFactor) / 2
 
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 25
-        layout.itemSize = itemSize
+//        layout.itemSize = itemSize
 
         collectionView.collectionViewLayout = layout
         collectionView.decelerationRate = .fast
         collectionView.bounces = true
         collectionView.alwaysBounceHorizontal = true
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: insetSize, bottom: 0, right:  insetSize)
+//        collectionView.contentInset = UIEdgeInsets(top: 0, left: insetSize, bottom: 0, right:  insetSize)
     }
 }
 

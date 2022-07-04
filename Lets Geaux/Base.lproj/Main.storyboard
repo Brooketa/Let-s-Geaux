@@ -31,7 +31,7 @@
         <!--Discover-->
         <scene sceneID="phq-3z-SQi">
             <objects>
-                <viewController storyboardIdentifier="DiscoverViewController" title="Discover" id="a7A-2T-zu8" customClass="DiscoverViewController" customModule="Lets_Geaux" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiscoverViewController" title="Discover" id="a7A-2T-zu8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AWt-NW-HV0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,9 +51,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Discover" largeTitleDisplayMode="never" id="i6e-fB-2a0"/>
-                    <connections>
-                        <outlet property="tableView" destination="k7I-Mx-3tY" id="2lP-sO-oXP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyR-gO-C9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
