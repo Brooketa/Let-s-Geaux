@@ -6,8 +6,6 @@ class DiscoverPresenter {
     private let newsUseCase: NewsUseCaseProtocol
     private let appRouter: AppRouterProtocol
 
-    let dateFormatter = DateFormatter()
-
     init(newsUseCase: NewsUseCaseProtocol, appRouter: AppRouterProtocol) {
         self.newsUseCase = newsUseCase
         self.appRouter = appRouter
