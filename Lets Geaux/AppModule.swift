@@ -27,15 +27,39 @@ private extension AppModule {
         registerAppRouter(in: container)
     }
 
-    private func registerClients(in container: Resolver) {}
+    private func registerClients(in container: Resolver) {
+        container
+            .register { NewsClient() }
+            .implements(NewsClientProtocol.self)
+            .scope(.application)
+    }
 
-    private func registerDataSources(in container: Resolver) {}
+    private func registerDataSources(in container: Resolver) {
+        container
+            .register { NewsDataSource(newsClient: container.resolve()) }
+            .implements(NewsDataSourceProtocol.self)
+            .scope(.application)
+    }
 
-    private func registerRepositories(in container: Resolver) {}
+    private func registerRepositories(in container: Resolver) {
+        container
+            .register { NewsRepository(newsDataSource: container.resolve()) }
+            .implements(NewsRepositoryProtocol.self)
+            .scope(.application)
+    }
 
-    private func registerUseCases(in container: Resolver) {}
+    private func registerUseCases(in container: Resolver) {
+        container
+            .register { NewsUseCase(newsRepository: container.resolve()) }
+            .implements(NewsUseCaseProtocol.self)
+            .scope(.application)
+    }
 
-    private func registerPresenters(in container: Resolver) {}
+    private func registerPresenters(in container: Resolver) {
+        container
+            .register { DiscoverPresenter(newsUseCase: container.resolve(), appRouter: container.resolve()) }
+            .scope(.unique)
+    }
 
     private func registerViewControllers(in container: Resolver) {}
 
