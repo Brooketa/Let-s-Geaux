@@ -1,8 +1,8 @@
 import UIKit
 
-class DiscoverTableViewSectionHeader: UITableViewHeaderFooterView {
+class DiscoverCollectionViewSectionHeader: UITableViewHeaderFooterView {
 
-    static let identifier = String(describing: DiscoverTableViewSectionHeader.self)
+    static let identifier = String(describing: DiscoverCollectionViewSectionHeader.self)
 
     var sectionTitleLabel: UILabel!
     var sectionButton: UIButton!

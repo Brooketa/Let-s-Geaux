@@ -1,110 +1,38 @@
-//
-//  ViewController.swift
-//  Let's Geaux
-//
-//  Created by Brooketa on 12.04.2021..
-//
-
+import Combine
 import UIKit
 
-class DiscoverViewController: UIViewController, UITableViewDelegate {
+enum DiscoverSection {
+    case whatsUp
+}
 
-    @IBOutlet weak var tableView: UITableView!
+class DiscoverViewController: UIViewController {
 
-    var news:[News]?
+    typealias NewsDataSource = UICollectionViewDiffableDataSource<DiscoverSection, NewsViewModel>
+    typealias NewsSnapshot = NSDiffableDataSourceSnapshot<DiscoverSection, NewsViewModel>
+
+    var collectionView: UICollectionView!
+
+    private var discoverPresenter: DiscoverPresenter
+    private var newsDataSource: NewsDataSource!
+    private var newsSnapshot: NewsSnapshot!
+
+    private var cancellables = Set<AnyCancellable>()
+
+    init(presenter: DiscoverPresenter) {
+        discoverPresenter = presenter
+
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        defaultNavigationAppearance()
-
-        //Table View Configuration
-        tableView.register(DiscoverTableViewSectionHeader.self,
-               forHeaderFooterViewReuseIdentifier: DiscoverTableViewSectionHeader.identifier)
-        tableView.register(DiscoverTableViewCell.nib(), forCellReuseIdentifier: DiscoverTableViewCell.cellIdentifier)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.refreshControl = UIRefreshControl(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        tableView.refreshControl?.tintColor = .white
-        tableView.refreshControl?.addTarget(self, action: #selector(fetch), for: UIControl.Event.valueChanged)
-
-        fetch()
-    }
-    
-    @objc func fetch() {
-        WebService.fetchNews(completion: { [weak self] news, error in
-            let isRefreshing = self?.tableView.refreshControl?.isRefreshing
-            if error == nil {
-                guard let news = news else { return }
-                if isRefreshing != nil {
-                    UIView.animate(withDuration: 0.3, animations: {
-                        self?.tableView.refreshControl?.endRefreshing()
-                        self?.tableView.reloadData()
-                    })
-                }
-                self?.news = news
-            } else {
-                if isRefreshing != nil {
-                    self?.tableView.refreshControl?.endRefreshing()
-                }
-            }
-        })
-    }
-}
-
-//MARK: UITableViewDataSource
-
-extension DiscoverViewController: UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        buildViews()
     }
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: DiscoverTableViewSectionHeader.identifier) as? DiscoverTableViewSectionHeader else { return nil }
-
-        header.configure(sectionTitleName: "What's Up?", buttonTitleName: "All news")
-
-        return header
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50.0
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: DiscoverTableViewCell.cellIdentifier) as! DiscoverTableViewCell
-
-        if news?.count ?? 0 > 0 {
-            cell.configure(news: news!, frameWidth: view.frame.size.width)
-            cell.delegate = self
-        }
-
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(view.frame.size.width * 0.8 * 1.4)
-    }
-}
-
-//MARK: DiscoverTableViewCellDelegate
-
-extension DiscoverViewController: DiscoverTableViewCellDelegate {
-    func didSelectCell(indexPath: IndexPath) {
-        if let newsItem = news?[indexPath.row] {
-
-            let newsViewController = NewsDetailsViewController()
-            newsViewController.navigationItem.title = "News"
-            newsViewController.hidesBottomBarWhenPushed = true
-            newsViewController.model = newsItem
-
-            self.navigationController?.pushViewController(newsViewController, animated: true)
-        }
-    }
 }
 
