@@ -97,13 +97,12 @@ extension DiscoverViewController: UITableViewDataSource {
 extension DiscoverViewController: DiscoverTableViewCellDelegate {
     func didSelectCell(indexPath: IndexPath) {
         if let newsItem = news?[indexPath.row] {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
-            guard let newsViewController = storyboard.instantiateViewController(identifier: NewsViewController.identifier) as? NewsViewController else { return }
+            let newsViewController = NewsDetailsViewController()
             newsViewController.navigationItem.title = "News"
             newsViewController.hidesBottomBarWhenPushed = true
+            newsViewController.model = newsItem
 
-            newsViewController.news = newsItem
             self.navigationController?.pushViewController(newsViewController, animated: true)
         }
     }
