@@ -1,5 +1,5 @@
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class NewsViewController: UIViewController {
     
@@ -32,7 +32,7 @@ class NewsViewController: UIViewController {
     func loadNewsData() {
         guard let news = self.news else { return }
 
-        newsImageView.sd_setImage(with: URL(string: news.imageURL), placeholderImage: nil, options: SDWebImageOptions.highPriority, completed: nil)
+        newsImageView.kf.setImage(with: URL(string: news.imageURL)!)
         
         titleLabel.text = news.title
         descriptionLabel.text = news.description
