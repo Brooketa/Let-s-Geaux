@@ -33,13 +33,12 @@ extension DiscoverCollectionViewCell: ConstructViewsProtocol {
         addRoundedCornerAndShadow()
 
         newsImageView.contentMode = .scaleAspectFill
+        newsImageView.clipsToBounds = true
 
         textWrapperStackView.backgroundColor = .white
         textWrapperStackView.distribution = .fillEqually
         textWrapperStackView.alignment = .fill
         textWrapperStackView.axis = .vertical
-        textWrapperStackView.isLayoutMarginsRelativeArrangement = true
-        textWrapperStackView.layoutMargins = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
 
         titleLabel.textColor = .black
         titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
@@ -50,11 +49,11 @@ extension DiscoverCollectionViewCell: ConstructViewsProtocol {
         captionAndPublishedTextStackView.axis = .vertical
         captionAndPublishedTextStackView.spacing = 5
 
-        captionLabel.textColor = .systemGray2
+        captionLabel.textColor = AppearanceUtils.darkGrey
         captionLabel.font = .systemFont(ofSize: 16, weight: .regular)
         captionLabel.numberOfLines = 0
 
-        publishedLabel.textColor = .systemGray2
+        publishedLabel.textColor = AppearanceUtils.darkGrey
         publishedLabel.font = .systemFont(ofSize: 13, weight: .regular)
     }
 
@@ -66,7 +65,8 @@ extension DiscoverCollectionViewCell: ConstructViewsProtocol {
 
         textWrapperStackView.snp.makeConstraints { make in
             make.top.equalTo(newsImageView.snp.bottom)
-            make.leading.trailing.equalToSuperview()
+            make.leading.equalToSuperview().offset(15)
+            make.trailing.equalToSuperview().inset(15)
             make.bottom.equalToSuperview().inset(15)
         }
     }
