@@ -1,14 +1,14 @@
 import UIKit
 
-class DiscoverCollectionViewSectionHeader: UITableViewHeaderFooterView {
+class DiscoverCollectionViewSectionHeader: UICollectionReusableView {
 
     static let identifier = String(describing: DiscoverCollectionViewSectionHeader.self)
 
     var sectionTitleLabel: UILabel!
     var sectionButton: UIButton!
 
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
 
         buildViews()
     }
@@ -23,13 +23,8 @@ class DiscoverCollectionViewSectionHeader: UITableViewHeaderFooterView {
         defineLayoutForViews()
     }
 
-    public func configure(sectionTitleName: String, buttonTitleName: String?) {
-        sectionTitleLabel.text = sectionTitleName
-
-        if buttonTitleName != nil {
-            sectionButton.setTitle(buttonTitleName!, for: .normal)
-            sectionButton.isHidden = false
-        }
+    public func set(sectionTitle: String) {
+        sectionTitleLabel.text = sectionTitle
     }
 
 }

@@ -17,13 +17,13 @@ extension DiscoverCollectionViewSectionHeader: ConstructViewsProtocol {
     }
 
     func styleViews() {
-        contentView.backgroundColor = AppearanceUtils.lightGrey
 
         sectionTitleLabel.textColor = .black
         sectionTitleLabel.font = .systemFont(ofSize: 25, weight: .bold)
 
         sectionButton.setTitleColor(.black, for: .normal)
         sectionButton.titleLabel?.font = .systemFont(ofSize: 14, weight: .regular)
+        sectionButton.setTitle("All news", for: .normal)
     }
 
     func defineLayoutForViews() {

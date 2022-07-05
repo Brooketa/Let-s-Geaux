@@ -67,9 +67,9 @@ class AppRouter: AppRouterProtocol {
     func showNewsDetails(with viewModel: NewsViewModel) {
         guard let navigationController = navigationController else { return }
 
-        let newsDetailsViewController: NewsDetailsViewController = container.resolve()
-        newsDetailsViewController.set(with: viewModel)
-        navigationController.pushViewController(newsDetailsViewController, animated: false)
+        let newsDetailsViewController: NewsDetailsViewController = container.resolve(args: viewModel)
+
+        navigationController.pushViewController(newsDetailsViewController, animated: true)
     }
 
 }

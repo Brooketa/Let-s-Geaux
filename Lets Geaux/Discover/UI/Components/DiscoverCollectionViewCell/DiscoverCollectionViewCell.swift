@@ -28,11 +28,11 @@ class DiscoverCollectionViewCell: UICollectionViewCell {
         defineLayoutForViews()
     }
 
-    public func set(with news: News) {
-        newsImageView.kf.setImage(with: URL(string: news.imageURL)!)
-        titleLabel.text = news.title
-        captionLabel.text = news.caption
-        publishedLabel.attributedText = publishedLabelAttributedText(date: news.createdAt)
+    public func set(with viewModel: NewsViewModel) {
+        newsImageView.kf.setImage(with: viewModel.imageURL)
+        titleLabel.text = viewModel.title
+        captionLabel.text = viewModel.caption
+        publishedLabel.attributedText = publishedLabelAttributedText(date: viewModel.createdAt.description)
     }
 
     private func publishedLabelAttributedText(date:String) -> NSAttributedString {

@@ -72,8 +72,9 @@ private extension AppModule {
             .scope(.unique)
 
         container
-            .register { NewsDetailsViewController() }
-            .scope(.unique)
+            .register { (_, arg) in
+                NewsDetailsViewController(viewModel: arg())
+            }
     }
 
     private func registerAppRouter(in container: Resolver) {

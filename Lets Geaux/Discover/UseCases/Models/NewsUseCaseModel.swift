@@ -13,7 +13,7 @@ struct NewsUseCaseModel {
         createdAt = Date(timeIntervalSince1970: TimeInterval(model.createdAt))
         caption = model.caption
         title = model.title
-        description = model.description
+        description = String(htmlEncodedString: model.description) ?? "Unable to load description"
     }
 
 }

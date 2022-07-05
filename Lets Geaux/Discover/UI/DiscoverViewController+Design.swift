@@ -56,15 +56,16 @@ extension DiscoverViewController: ConstructViewsProtocol {
 
         let item = NSCollectionLayoutItem(
             layoutSize: .init(
-                widthDimension: .fractionalWidth(DiscoverCollectionViewConstants.widthScaleFactor),
-                heightDimension: .fractionalHeight(DiscoverCollectionViewConstants.cellAspectRatio)))
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(1)))
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
 
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: .init(
-                widthDimension: .fractionalWidth(1),
+                widthDimension: .fractionalWidth(0.88),
                 heightDimension: .fractionalWidth(1)),
             subitems: [item])
-        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15)
+        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
 
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPagingCentered
