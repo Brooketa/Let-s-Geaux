@@ -17,7 +17,6 @@ extension DiscoverCollectionViewSectionHeader: ConstructViewsProtocol {
     }
 
     func styleViews() {
-
         sectionTitleLabel.textColor = .black
         sectionTitleLabel.font = .systemFont(ofSize: 25, weight: .bold)
 
