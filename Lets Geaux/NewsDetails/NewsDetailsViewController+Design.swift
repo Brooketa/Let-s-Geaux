@@ -33,7 +33,7 @@ extension NewsDetailsViewController: ConstructViewsProtocol {
     }
     
     func styleViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = .primaryBackground
 
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.rightBarButtonItems = nil
@@ -42,24 +42,25 @@ extension NewsDetailsViewController: ConstructViewsProtocol {
         scrollView.alwaysBounceVertical = true
         scrollView.alwaysBounceHorizontal = false
         scrollView.isDirectionalLockEnabled = true
+        scrollView.showsVerticalScrollIndicator = false
 
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = .primaryBackground
 
         newsImageView.contentMode = .scaleAspectFill
         newsImageView.clipsToBounds = true
 
-        eventLabel.textColor = AppearanceUtils.turquoise
+        eventLabel.textColor = .accentColor
         eventLabel.font = .systemFont(ofSize: 17, weight: .semibold)
 
-        titleLabel.textColor = .black
+        titleLabel.textColor = .primaryTitle
         titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
         titleLabel.numberOfLines = 0
 
-        descriptionLabel.textColor = .black
+        descriptionLabel.textColor = .text
         descriptionLabel.font = .systemFont(ofSize: 13)
         descriptionLabel.numberOfLines = 0
 
-        publishedLabel.textColor = AppearanceUtils.darkGrey
+        publishedLabel.textColor = .greyText
         publishedLabel.font = .systemFont(ofSize: 14, weight: .medium)
     }
 

@@ -39,7 +39,7 @@ class AppRouter: AppRouterProtocol {
         tabBarController.viewControllers = [navigationController]
         tabBarController.tabBar.isTranslucent = false
         tabBarController.tabBar.unselectedItemTintColor = .lightGray
-        tabBarController.tabBar.backgroundColor = .white
+        tabBarController.tabBar.backgroundColor = .tabBarBackground
     }
 
     private func createTabBarItem(
@@ -48,14 +48,14 @@ class AppRouter: AppRouterProtocol {
         deselectedImageName: String
     ) -> UITabBarItem {
         guard
-            let selectedImage = UIImage(systemName: selectedImageName)?.withTintColor(AppearanceUtils.turquoise, renderingMode: .alwaysOriginal),
+            let selectedImage = UIImage(systemName: selectedImageName)?.withTintColor(.accentColor, renderingMode: .alwaysOriginal),
             let deselectedImage = UIImage(systemName: deselectedImageName)
         else {
             return UITabBarItem()
         }
 
         let tabBarItem = UITabBarItem(title: title, image: deselectedImage, selectedImage: selectedImage)
-        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: AppearanceUtils.turquoise], for: .normal)
+        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.accentColor], for: .normal)
 
         return tabBarItem
     }

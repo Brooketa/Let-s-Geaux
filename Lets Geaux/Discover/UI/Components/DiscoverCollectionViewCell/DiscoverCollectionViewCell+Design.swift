@@ -29,18 +29,18 @@ extension DiscoverCollectionViewCell: ConstructViewsProtocol {
     }
 
     func styleViews() {
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = .cellBackgroundColor
         addRoundedCornerAndShadow()
 
         newsImageView.contentMode = .scaleAspectFill
         newsImageView.clipsToBounds = true
 
-        textWrapperStackView.backgroundColor = .white
+        textWrapperStackView.backgroundColor = .cellBackgroundColor
         textWrapperStackView.distribution = .fillEqually
         textWrapperStackView.alignment = .fill
         textWrapperStackView.axis = .vertical
 
-        titleLabel.textColor = .black
+        titleLabel.textColor = .cellTitle
         titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
         titleLabel.numberOfLines = 0
 
@@ -49,11 +49,11 @@ extension DiscoverCollectionViewCell: ConstructViewsProtocol {
         captionAndPublishedTextStackView.axis = .vertical
         captionAndPublishedTextStackView.spacing = 5
 
-        captionLabel.textColor = AppearanceUtils.darkGrey
+        captionLabel.textColor = .greyText
         captionLabel.font = .systemFont(ofSize: 16, weight: .regular)
         captionLabel.numberOfLines = 0
 
-        publishedLabel.textColor = AppearanceUtils.darkGrey
+        publishedLabel.textColor = .greyText
         publishedLabel.font = .systemFont(ofSize: 13, weight: .regular)
     }
 

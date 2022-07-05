@@ -32,9 +32,9 @@ extension DiscoverViewController: ConstructViewsProtocol {
     func styleViews() {
         defaultNavigationAppearance()
         title = "Discover"
-        view.backgroundColor = AppearanceUtils.lightGrey
+        view.backgroundColor = .primaryBackground
 
-        collectionView.backgroundColor = AppearanceUtils.lightGrey
+        collectionView.backgroundColor = .primaryBackground
         collectionView.showsVerticalScrollIndicator = false
     }
 

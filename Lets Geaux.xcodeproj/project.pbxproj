@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7006D55428746A1200ACA3FC /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7006D55328746A1200ACA3FC /* APIConstants.swift */; };
+		7006D55628747F0700ACA3FC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7006D55528747F0700ACA3FC /* UIColor+Extensions.swift */; };
 		701E0B322870D9140050B127 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 701E0B312870D9140050B127 /* Resolver */; };
 		701E0B342870D9260050B127 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E0B332870D9260050B127 /* AppModule.swift */; };
 		701E0B372870D9C10050B127 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E0B362870D9C10050B127 /* AppRouter.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		7006D55328746A1200ACA3FC /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		7006D55528747F0700ACA3FC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		701E0B332870D9260050B127 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 		701E0B362870D9C10050B127 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		701E0B382870D9DA0050B127 /* AppRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterProtocol.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 			children = (
 				7083A9602628962100B30947 /* ViewController+Extensions.swift */,
 				70F616222628D2BA0072F8BC /* String+Extensions.swift */,
+				7006D55528747F0700ACA3FC /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				70D3E9FF2871B782005D0115 /* DiscoverCollectionViewCell+Design.swift in Sources */,
 				70C4B6C6287264220057AC77 /* NewsViewModel.swift in Sources */,
 				70C4B6A6287258B40057AC77 /* NewsClient.swift in Sources */,
+				7006D55628747F0700ACA3FC /* UIColor+Extensions.swift in Sources */,
 				70C4B6C228725FEE0057AC77 /* NewsUseCaseModel.swift in Sources */,
 				70C4B6A8287258BE0057AC77 /* NewsClientProtocol.swift in Sources */,
 				70772836262729D100D9909A /* AppearanceUtils.swift in Sources */,
