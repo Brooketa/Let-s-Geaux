@@ -3,6 +3,8 @@ import Kingfisher
 
 class NewsDetailsViewController: UIViewController {
 
+    static let identifier = "NewsViewController"
+
     var scrollView: UIScrollView!
     var contentView: UIView!
     var newsImageView: UIImageView!
@@ -11,11 +13,12 @@ class NewsDetailsViewController: UIViewController {
     var descriptionLabel: UILabel!
     var publishedLabel: UILabel!
 
-    static let identifier = "NewsViewController"
+    private var viewModel: NewsViewModel
 
-    init() {
+    init(viewModel: NewsViewModel) {
+        self.viewModel = viewModel
+
         super.init(nibName: nil, bundle: nil)
-
     }
 
     required init?(coder: NSCoder) {
@@ -28,7 +31,11 @@ class NewsDetailsViewController: UIViewController {
         buildViews()
     }
 
-    func set(with viewModel: NewsViewModel) {
+    override func viewWillAppear(_ animated: Bool) {
+        setNewsInfo()
+    }
+
+    func setNewsInfo() {
         newsImageView.kf.setImage(with: viewModel.imageURL)
         eventLabel.text = "Event"
         titleLabel.text = viewModel.title

@@ -20,4 +20,5 @@ extension UIViewController {
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
     }
+
 }
