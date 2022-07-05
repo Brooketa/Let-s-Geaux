@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7006D55428746A1200ACA3FC /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7006D55328746A1200ACA3FC /* APIConstants.swift */; };
-		701E0B2B2870D1D30050B127 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 701E0B2A2870D1D30050B127 /* Alamofire */; };
 		701E0B322870D9140050B127 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 701E0B312870D9140050B127 /* Resolver */; };
 		701E0B342870D9260050B127 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E0B332870D9260050B127 /* AppModule.swift */; };
 		701E0B372870D9C10050B127 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E0B362870D9C10050B127 /* AppRouter.swift */; };
@@ -45,8 +44,6 @@
 		70D650B12628591800777ECD /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D650B02628591800777ECD /* NewsDetailsViewController.swift */; };
 		70E3FBD72626169D00CAE881 /* DiscoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3FBD52626169D00CAE881 /* DiscoverCollectionViewCell.swift */; };
 		70F616232628D2BA0072F8BC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F616222628D2BA0072F8BC /* String+Extensions.swift */; };
-		70FD4B0126289A6D0049EA5B /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD4B0026289A6D0049EA5B /* NearMeViewController.swift */; };
-		70FD4B0426289A830049EA5B /* PrizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD4B0326289A830049EA5B /* PrizesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,8 +83,6 @@
 		70D650B02628591800777ECD /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		70E3FBD52626169D00CAE881 /* DiscoverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewCell.swift; sourceTree = "<group>"; };
 		70F616222628D2BA0072F8BC /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		70FD4B0026289A6D0049EA5B /* NearMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
-		70FD4B0326289A830049EA5B /* PrizesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +92,6 @@
 			files = (
 				701E0B322870D9140050B127 /* Resolver in Frameworks */,
 				70D3E9FA2871B463005D0115 /* SnapKit in Frameworks */,
-				701E0B2B2870D1D30050B127 /* Alamofire in Frameworks */,
 				70D3EA052871C534005D0115 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,13 +128,11 @@
 			isa = PBXGroup;
 			children = (
 				701E0B352870D9950050B127 /* AppRouter */,
+				70F616212628D2880072F8BC /* Extensions */,
 				70D3EA002871B7A5005D0115 /* Shared */,
+				70772834262729B500D9909A /* Utils */,
 				70E3FBCC2626161500CAE881 /* Discover */,
 				70D650AF2628590400777ECD /* NewsDetails */,
-				70F6162626290FE70072F8BC /* Near me */,
-				70F6162726290FF60072F8BC /* Prizes */,
-				70F616212628D2880072F8BC /* Extensions */,
-				70772834262729B500D9909A /* Utils */,
 				7076718526249CDA00D8DEF1 /* AppDelegate.swift */,
 				701E0B332870D9260050B127 /* AppModule.swift */,
 				7076718E26249CDD00D8DEF1 /* Assets.xcassets */,
@@ -317,22 +309,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		70F6162626290FE70072F8BC /* Near me */ = {
-			isa = PBXGroup;
-			children = (
-				70FD4B0026289A6D0049EA5B /* NearMeViewController.swift */,
-			);
-			path = "Near me";
-			sourceTree = "<group>";
-		};
-		70F6162726290FF60072F8BC /* Prizes */ = {
-			isa = PBXGroup;
-			children = (
-				70FD4B0326289A830049EA5B /* PrizesViewController.swift */,
-			);
-			path = Prizes;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,7 +326,6 @@
 			);
 			name = "Lets Geaux";
 			packageProductDependencies = (
-				701E0B2A2870D1D30050B127 /* Alamofire */,
 				701E0B312870D9140050B127 /* Resolver */,
 				70D3E9F92871B463005D0115 /* SnapKit */,
 				70D3EA042871C534005D0115 /* Kingfisher */,
@@ -383,7 +358,6 @@
 			);
 			mainGroup = 7076717926249CDA00D8DEF1;
 			packageReferences = (
-				701E0B292870D1D30050B127 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				701E0B302870D9140050B127 /* XCRemoteSwiftPackageReference "Resolver" */,
 				70D3E9F82871B463005D0115 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				70D3EA032871C534005D0115 /* XCRemoteSwiftPackageReference "Kingfisher" */,
@@ -431,11 +405,9 @@
 				7083A95626287E5D00B30947 /* DiscoverCollectionViewSectionHeader.swift in Sources */,
 				70F616232628D2BA0072F8BC /* String+Extensions.swift in Sources */,
 				70D3E9FF2871B782005D0115 /* DiscoverCollectionViewCell+Design.swift in Sources */,
-				70FD4B0426289A830049EA5B /* PrizesViewController.swift in Sources */,
 				70C4B6C6287264220057AC77 /* NewsViewModel.swift in Sources */,
 				70C4B6A6287258B40057AC77 /* NewsClient.swift in Sources */,
 				70C4B6C228725FEE0057AC77 /* NewsUseCaseModel.swift in Sources */,
-				70FD4B0126289A6D0049EA5B /* NearMeViewController.swift in Sources */,
 				70C4B6A8287258BE0057AC77 /* NewsClientProtocol.swift in Sources */,
 				70772836262729D100D9909A /* AppearanceUtils.swift in Sources */,
 				70E3FBD72626169D00CAE881 /* DiscoverCollectionViewCell.swift in Sources */,
@@ -647,14 +619,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		701E0B292870D1D30050B127 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		701E0B302870D9140050B127 /* XCRemoteSwiftPackageReference "Resolver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hmlongco/Resolver";
@@ -682,11 +646,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		701E0B2A2870D1D30050B127 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 701E0B292870D1D30050B127 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		701E0B312870D9140050B127 /* Resolver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 701E0B302870D9140050B127 /* XCRemoteSwiftPackageReference "Resolver" */;

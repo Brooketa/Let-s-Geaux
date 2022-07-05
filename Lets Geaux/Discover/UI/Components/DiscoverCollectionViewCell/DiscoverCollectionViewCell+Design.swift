@@ -76,7 +76,7 @@ extension DiscoverCollectionViewCell: ConstructViewsProtocol {
         contentView.layer.borderWidth = 1.0
         contentView.layer.borderColor = UIColor.clear.cgColor
         contentView.layer.masksToBounds = true
-        
+
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 5.0)
         layer.shadowRadius = 10.0
