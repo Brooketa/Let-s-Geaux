@@ -3,6 +3,16 @@
     {
       "filename" : "background_gradient_image.png",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "background_gradient_image_dark_mode.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

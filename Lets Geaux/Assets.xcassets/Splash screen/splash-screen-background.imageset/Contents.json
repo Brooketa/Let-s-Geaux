@@ -3,6 +3,16 @@
     {
       "filename" : "splash-screen-background.png",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "splash-screen-background-dark-mode.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {
