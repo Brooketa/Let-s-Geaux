@@ -40,6 +40,7 @@ class NewsDetailsViewController: UIViewController {
         eventLabel.text = "Event"
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.description
+
         publishedLabel.text = "Published: \(viewModel.createdAt)"
     }
 

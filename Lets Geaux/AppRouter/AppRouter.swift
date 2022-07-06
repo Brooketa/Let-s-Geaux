@@ -37,7 +37,7 @@ class AppRouter: AppRouterProtocol {
         navigationController.setViewControllers([discoverViewController], animated: true)
 
         tabBarController.viewControllers = [navigationController]
-        tabBarController.tabBar.isTranslucent = false
+        tabBarController.tabBar.isTranslucent = true
         tabBarController.tabBar.unselectedItemTintColor = .lightGray
         tabBarController.tabBar.backgroundColor = .tabBarBackground
     }

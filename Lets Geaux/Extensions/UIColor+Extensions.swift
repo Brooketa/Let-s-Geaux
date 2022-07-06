@@ -10,11 +10,11 @@ public extension UIColor {
     static let veryDarkGrey = UIColor(rgb: 0x0C0C0C)
 
     static var primaryBackground: UIColor {
-        .resolveColor(forLightMode: .lightGrey, forDarkMode: .darkGrey)
+        .resolveColor(forLightMode: .lightGrey, forDarkMode: .veryDarkGrey)
     }
 
     static var tabBarBackground: UIColor {
-        .resolveColor(forLightMode: .white, forDarkMode: .veryDarkGrey)
+        .resolveColor(forLightMode: .white, forDarkMode: .darkGrey)
     }
 
     static var navigationTitle: UIColor {
@@ -30,7 +30,7 @@ public extension UIColor {
     }
 
     static var cellBackgroundColor: UIColor {
-        .resolveColor(forLightMode: .white, forDarkMode: .veryDarkGrey)
+        .resolveColor(forLightMode: .white, forDarkMode: .darkGrey)
     }
 
     static var text: UIColor {

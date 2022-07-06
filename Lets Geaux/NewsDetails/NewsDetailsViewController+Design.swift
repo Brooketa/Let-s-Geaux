@@ -73,7 +73,7 @@ extension NewsDetailsViewController: ConstructViewsProtocol {
             make.top.bottom.equalTo(self.scrollView)
             make.left.right.equalTo(self.view)
             make.width.equalTo(self.scrollView)
-            make.height.equalTo(self.scrollView)
+            make.height.greaterThanOrEqualTo(self.scrollView)
         }
 
         newsImageView.snp.makeConstraints { make in
@@ -103,7 +103,7 @@ extension NewsDetailsViewController: ConstructViewsProtocol {
             make.top.equalTo(descriptionLabel.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(15)
             make.trailing.equalToSuperview().inset(15)
-            make.bottom.greaterThanOrEqualTo(20).priority(.low)
+            make.bottom.equalTo(contentView.snp.bottom).inset(20).priority(.low)
         }
     }
 
