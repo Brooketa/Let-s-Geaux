@@ -40,4 +40,5 @@ class DiscoverPresenter {
     func showNewsDetails(viewModel: NewsViewModel) {
         appRouter.showNewsDetails(with: viewModel)
     }
+
 }

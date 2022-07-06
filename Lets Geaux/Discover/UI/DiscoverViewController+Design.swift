@@ -1,11 +1,6 @@
 import UIKit
 import SnapKit
 
-struct DiscoverCollectionViewConstants {
-    static let widthScaleFactor:CGFloat = 0.8
-    static let cellAspectRatio:CGFloat = 1.2
-}
-
 extension DiscoverViewController: ConstructViewsProtocol {
 
     func buildViews() {
@@ -74,4 +69,5 @@ extension DiscoverViewController: ConstructViewsProtocol {
 
         return UICollectionViewCompositionalLayout(section: section)
     }
+
 }
